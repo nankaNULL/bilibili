@@ -1,0 +1,77 @@
+/*div,a{border:solid 1px black;}*/
+body{background:#fafafa;}
+.container div,a{font-size: 13px;}
+.container{
+	width:992px;
+	margin:40px auto;
+	display: flex;
+}
+.footer-list{
+	overflow: hidden;
+	/*max-width: 120px;*/
+	padding-left:20px;
+	border-right:solid 1px lightblue;
+}
+.container>div{width:373px;}
+/*.container div:nth-child(2){width:373px;}
+.container div:last-child{width:373px;}*/
+.footer-list div:not(.list-title){
+	float: left;
+	max-width:122px;
+	min-width: 90px;
+	margin-top:20px;
+}
+.footer-list span{color:#666;}
+.footer-list a{
+	text-decoration: none;
+	color:black;
+}
+.footer-list a:hover{
+	transition: all 0.1s linear;
+	color:#00A1D6;
+}
+.m-mt{margin-top:-10px;border:0;}
+/*.m-mt div{width: 100px}*/
+/*-- icon -- */
+.download-icon{
+	display: block;
+	margin-bottom:5px;
+    width: 60px;
+    height: 60px;
+    background:url(../images/icon.png) no-repeat;
+}
+.icon-pc{
+	background-position: -1024px -194px;
+}
+.icon-sina{
+	background-position: -1024px -322px;
+	margin-left:-3px;
+}
+.icon-wechat{
+	background-position: -1024px -66px;
+	margin-left:-3px;
+}
+
+/* -- -- */
+.company{
+	width:992px;
+	margin:0 auto 40px;
+	padding:0 20px;
+	display: flex; 
+	color:#666; 
+	font-size: 12px;
+}
+.c-l img{
+	/*display: block;*/
+	/*height:36px;*/
+	/*width:90px;*/
+	/*border: solid 1px black;*/
+}
+.c-r{
+	margin-left:20px;
+}
+.c-r p{margin-bottom: 8px;}
+.c-r a{
+	color:#666;
+}
+.c-r a:hover{color:blue;}

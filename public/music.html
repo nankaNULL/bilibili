@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>哔哩哔哩乾杯——音频</title>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/iconfont.css">
+		<link rel="stylesheet" href="css/music.css">
+	</head>
+	<body>
+		<div id="app">
+            <div class="container">
+                <div class="slider">
+                    <ul class="slider-con">
+                        <li class="slider-item active" data-slider="0">
+                            <a href="javascript:void(0)">
+                                <img src="images/slider1.webp">
+                                <div>查收这份双十一礼物！</div>
+                            </a>
+                        </li>
+                        <li class="slider-item">
+                            <a href="javascript:void(0)">
+                                <img src="images/slider2.webp">
+                                <div>用粤语翻唱日语歌竟然这么好听！</div>
+                            </a>
+                        </li>
+                        <li class="slider-item" data-slider="1">
+                            <a href="javascript:void(0)">
+                                <img src="images/slider3.webp">
+                                <div>糟糕！是心动的声音</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="slider-dot">
+                        <li class="dot-item active"><button class="btn-dot"></button></li>
+                        <li class="dot-item"><button class="btn-dot"></button></li>
+                        <li class="dot-item"><button class="btn-dot"></button></li>
+                    </ul>
+                </div>
+                <div class="m-recommend m-model">
+                    <div class="mod-title">歌单推荐</div>  
+                    <ul>
+                        <li class="music-list" v-for="rclist in recommendLists" :key="rclist.lid">
+                            <div class="list-img">
+                                <img :src="rclist.pic" alt="">
+                                <div>
+                                    <i class="iconfont play-icon"></i>
+                                </div>
+                            </div>
+                            <div class="list-con">
+                                <p>
+                                    <a href="javascript:void(0)">{{rclist.title}}</a>
+                                </p>
+                                <p>
+                                    <i class="iconfont"></i>
+                                    <span>{{rclist.num}}</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-rank m-model">
+                    <div class="mod-title">热门榜单</div>
+                    <div class="rank-content">
+                        <div class="rank-list">
+                            <div class="rlist-title">
+                                <img src="images/recommend_new.jpg" alt="">
+                                <div>
+                                    <a href="javascript:void(0);">每日新曲推荐（每日11:00更新）</a>
+                                    <div class="play">
+                                        <i></i>
+                                        <span>播放全部</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li v-for="song in hotSonglists" :key="song.id" class="rlist-item">
+                                    <span>{{song.id}}</span>
+                                    <div class="item-title">
+                                        <a href="#" class="title">{{song.title}}</a>
+                                        <i class=""></i>
+                                        <span>{{song.time}}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="item-more">
+                                <a href="#">
+                                    <span>查看更多</span>
+                                    <i> > </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rank-list">
+                            <div class="rlist-title">
+                                <img src="images/recommend_hot.jpg" alt="">
+                                <div>
+                                    <a href="javascript:void(0);">热歌榜（每日11:00更新）</a>
+                                    <div class="play">
+                                        <i></i>
+                                        <span>播放全部</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li v-for="song in hotSonglists" :key="song.id" class="rlist-item">
+                                    <span>{{song.id}}</span>
+                                    <div class="item-title">
+                                        <a href="#" class="title">{{song.title}}</a>
+                                        <i class=""></i>
+                                        <span>{{song.time}}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="item-more">
+                                <a href="#">
+                                    <span>查看更多</span>
+                                    <i> > </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="rank-list">
+                            <div class="rlist-title">
+                                <img src="images/recommend_yc.jpg" alt="">
+                                <div>
+                                    <a href="javascript:void(0);">原创榜（每日11:00更新）</a>
+                                    <div class="play">
+                                        <i></i>
+                                        <span>播放全部</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li v-for="song in hotSonglists" :key="song.id" class="rlist-item">
+                                    <span>{{song.id}}</span>
+                                    <div class="item-title">
+                                        <a href="#" class="title">{{song.title}}</a>
+                                        <i class=""></i>
+                                        <span>{{song.time}}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="item-more">
+                                <a href="#">
+                                    <span>查看更多</span>
+                                    <i> > </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-allrank m-model">
+                    <div class="mod-title">
+                        <span>全部榜单</span>
+                        <div class="pagination">
+                            <a href="#" class="prev">&lt;</a>
+                            <a href="#" class="pagination-item active">1</a>
+                            <a href="#" class="pagination-item">2</a>
+                            <a href="#" class="next">&gt;</a>
+                        </div>
+                    </div>
+                    <div class="ar-content">
+                        <ul>
+                            <li class="arank-list" v-for="(arlist,i) in arlists" :key="arlist.id" v-if="i>=start*5 && i<(start+1)*5">
+                                <img :src="arlist.pic" alt="">
+                                <a href="javascript:void(0)">{{arlist.title}}</a>
+                                <div class="cover">
+                                    <i class="iconfont play-icon"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="m-mymusic m-model">
+                    <div class="mod-title">
+                        <span>我的音乐</span>
+                        <ul class="tab">
+                            <li class="tab-list active">
+                                我的创建
+                                <em></em>
+                            </li>
+                            <li class="tab-list">
+                                我的收藏
+                                <em></em>   
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="per-content">
+                        <div class="per-create">
+                            <ul class="clearfix" >
+                                <li class="music-list">
+                                    <div class="list-img">
+                                        <img src="images/empty.png" alt="">
+                                        <div>
+                                            <i class="iconfont play-icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="list-con">
+                                        <p>
+                                            <a href="javascript:void(0)">默认歌单</a>
+                                        </p>
+                                        <p>
+                                            <span>0首歌曲 · 公开</span>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="per-collect">
+                            <div class="empty">
+                                <div><img src="images/no-data.940dc0f.png" alt=""></div>
+                                <p>TAT 什么都没收藏，快去歌单推荐发现新世界吧！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-musician m-model">
+                    <div class="mod-title">
+                        <span>音乐人推荐</span>
+                        <div class="update">
+                            <i></i>
+                            <span>换一换</span>
+                        </div>
+                    </div>
+                    <div class="musician-con">
+                        <ul class="musician-card">
+                            <li class="card-list">
+                                <a href="#"><img src="images/musician1.webp" alt=""></a> 
+                                <div>
+                                    <p>被治愈了的小琦</p>
+                                    <span>治愈系唱见</span>
+                                    <div class="btn-listen">试听</div>
+                                </div>
+                            </li>
+                            <li class="card-list">
+                                <a href="#"><img src="images/musician1.webp" alt=""></a> 
+                                <div>
+                                    <p>被治愈了的小琦</p>
+                                    <span>治愈系唱见</span>
+                                    <div class="btn-listen">试听</div>
+                                </div>
+                            </li>
+                            <li class="card-list">
+                                <a href="#"><img src="images/musician1.webp" alt=""></a> 
+                                <div>
+                                    <p>被治愈了的小琦</p>
+                                    <span>治愈系唱见</span>
+                                    <div class="btn-listen">试听</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="add-music">
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/vue.js"></script>
+        <!-- <script src="js/music.js"></script> -->
+        <script src="js/slider.js"></script>
+        <script>
+            new Vue({
+                el:"#app",
+                data:{
+                    recommendLists:[
+                        {lid:1,title:"每日新曲推荐（每日11:00更新）",num:"138.8万",pic:"images/recommend_new.jpg"},
+                        {lid:2,title:"Let's play!!动漫歌曲篇",num:"4万",pic:"images/recommend2.webp"},
+                        {lid:3,title:"今天也要有完美的主题曲~",num:"1.6万",pic:"images/recommend3.webp"},
+                        {lid:4,title:"【血小板】没有我哨魔吹不来的曲子",num:"2.6万",pic:"images/recommend4.webp"},
+                        {lid:5,title:"【V家黑暗地带】谁杀死了知更鸟",num:"2.6万",pic:"images/recommend5.webp"},
+                        {lid:6,title:"什么？这些歌竟然还有粤语翻唱？",num:"2.1万",pic:"images/recommend6.webp"},
+                        {lid:7,title:"今天也要有完美的主题曲~",num:"7.9万",pic:"images/recommend7.webp"},
+                        {lid:8,title:"【血小板】没有我哨魔吹不来的曲子",num:"2.1万",pic:"images/recommend8.webp"},
+                        {lid:9,title:"【纯音】东方Project神曲集",num:"1.2万",pic:"images/recommend9.webp"},
+                        {lid:10,title:"【华语】那些up主最爱翻唱的歌曲",num:"1.6万",pic:"images/recommend10.webp"}
+                    ],
+                    hotSonglists:[
+                        {id:1,title:"Fly Me to the Star（花叶版）",time:"01:33",type:"new"},
+                        {id:2,title:"光年之外",time:"03:56",type:"new"},
+                        {id:3,title:"「原创电音 Future Bass」CoLorFul",time:"03:22",type:"new"},
+                        {id:4,title:"旅路 夢中飛行 久石让（小提琴/中提琴版）",time:"01:36",type:"new"},
+                        {id:5,title:"【旋律潇遥】仙才叹",time:"04:36",type:"new"},
+                        {id:6,title:"【五五开】答案",time:"03:46",type:"new"},
+                        {id:7,title:"盗将行",time:"03:17",type:"new"},
+                        {id:8,title:"sign 0",time:"06:10",type:"new"},
+                        {id:9,title:"【筝】纯白（cover vk克&双笙）",time:"05:12",type:"new"},
+                        {id:10,title:"私奔到月球（Cover五月天/陈绮贞）",time:"03:50",type:"new"},
+                    ],
+                    arlists:[
+                        {id:1,pic:"images/recommend_chn.jpg",title:"中文人声三日榜"},
+                        {id:2,pic:"images/recommend_jap.jpg",title:"日文人声三日榜"},
+                        {id:3,pic:"images/recommend_gf.jpg",title:"古风人声三日榜"},
+                        {id:4,pic:"images/recommend_eng.jpg",title:"英文人声三日榜"},
+                        {id:5,pic:"images/recommend_vocaloid.jpg",title:"VOCALOID三日榜"},
+                        {id:6,pic:"images/recommend_chn.jpg",title:"ACG音乐三日榜"},
+                        {id:7,pic:"images/recommend_cyy.jpg",title:"纯音乐/演奏三日榜"},
+                        {id:8,pic:"images/recommend_gc.jpg",title:"鬼畜三日榜"},
+                        {id:9,pic:"images/recommend_ys.jpg",title:"有声节目三日榜"},
+                    ],
+                    start:0,
+                    end:2,
+                }
+            })
+        </script>
+	</body>
+</html>

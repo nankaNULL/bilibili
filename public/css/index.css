@@ -1,0 +1,722 @@
+a{
+	color:#333;
+}
+a:hover{
+	transition: all 0.1s linear;
+	color:#00A1D6;
+}
+div,ul,li,a,p{
+	/*border:solid 1px black;*/
+}
+
+/* --- header部分 --- */
+/*.header,.header a,.header div,.header ul,.header li{border:0;}*/
+.header{
+	background:url(../images/bg.png) no-repeat center ;
+}
+.nav-content,.header-content{
+	width:992px;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.header a{display: inline-block;}
+/* -- header部分的顶部nav -- */
+.nav{
+	background:rgba(255,255,255,.4);
+	padding: 0 20px 0 50px;
+	width: 100%;
+}
+.nav-content li{
+	float:left;
+	padding:0 8px;
+}
+.nav-content li:hover{
+	background:rgba(255,255,255,.4);
+}
+li.nav-index{padding-left:28px;}
+.bili-icon{
+	background:url(../images/icon.png);
+	position: absolute;
+    width: 17px;
+    height: 14px;
+    left: 8px;
+    top: 11px;
+    background-position: -919px -88px;
+}
+.nav-content ul:last-child{
+	height:38px;
+}
+#tg{
+	height:45px;
+	padding:10px 15px 0;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.nav a{
+	padding:10px 0;
+}
+.p-img{
+	border-radius: 50%;
+	width:38px;
+	height:38px;
+}
+
+/* -- header部分的中间背景logo&search -- */
+.header-content{
+	padding:20px 0 12px 0;
+	align-items: flex-end;
+}
+/*.header-right{
+	background:#D1D1D1;
+}*/
+.header-right a,.header-right input[type=text]{
+	background-color: rgba(230,230,230,.88);
+	transition: background-color 0.15s linear;
+}
+.header-right a{
+	line-height: 32px;
+	border:solid 1px #D1D1D1;
+}
+.header-right a:hover,.header-right input[type=text]:hover{background-color: white;}
+span.icon-rank{
+	padding:0 5px 0 26px;
+    display: inline-block;
+    background: url(../images/icon.png) no-repeat -659px -655px;
+}
+.header-right form{
+	display: inline-block;
+	position: relative;
+}
+.header-right input[type=text]{
+	height:34px;
+	width:250px;
+	padding-left:10px;
+	border:solid 1px #D1D1D1;
+	outline: none;
+	transition: background-color 0.15s linear;
+}
+.header-right input[type=submit]{
+    position: absolute;
+	top:-1px;
+    right: 0;
+    width: 45px;
+    height: 32px;
+    cursor: pointer;
+    background: url(../images/icon.png) -653px -720px;
+    border: 0;
+}
+
+/* --- 中间大块content部分 --- */
+.content{
+	width:994px;
+	margin:0 auto;
+	/*overflow: hidden;*/
+}
+.list-module{
+	overflow: hidden;
+	margin: 40px 0;
+}
+/* - 所有的小视屏展示缩略图尺寸- */
+.show-card{
+	width:160px;
+	height:99px;
+	margin-bottom:8px;
+}
+.show-card>img{border-radius: 3px;width:100%;height:100%;}
+/* - 所有content左右分布尺寸- */
+.list-left{
+	float:left;
+	width:724px;
+	/*border:solid 1px black;*/
+}
+.list-right{
+	margin-right:6px;
+	float:right;
+	width:260px;
+	/*border:solid 1px black;*/
+}
+/* -- content最上面的label -- */
+/*.label-list,.label-list ul,.label-list li,.label-list a,.label-list span,.label-list p{border:0;}*/
+.label-list{
+	padding:10px 0 12px;
+}
+.label-list ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	text-align: center;
+}
+.label-list span{
+	background: #FFAFC9;
+	color:white;
+	padding:0 3px;
+	border-radius: 5px;
+}
+.label-list p{
+	margin-top:2px;
+}
+.label-icon{
+	display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/icon.png) no-repeat;
+}
+.icon-home{
+	background-position: -660px -1170px;
+	width: 23px;
+    height: 21px;
+}
+.icon-zl{
+    background-position: -87px -1814px;
+}
+.icon-gc{
+    background-position: -87px -2006px;
+}
+.icon-live{
+    background-position: -87px -1878px;
+}
+.icon-xhw{
+    background-position: -87px -1942px;
+}
+/* - 下面的隐藏卡片 - */
+.labal-collapse-f:hover ul.labal-collapse {
+	display: block;
+}
+ul.labal-collapse {
+	display: none;
+	position:absolute;
+	left:-10px;
+	background:white;
+	text-align: left;
+	white-space: nowrap;
+	border-radius: 0 0 4px 4px;
+	z-index: 3;
+}
+.b-border{
+	border-radius: 0 0 4px 4px;
+}
+ul.labal-collapse span{background: transparent;color:#666;}
+ul.labal-collapse a{
+	display: inline-block;
+	min-width: 130px;
+	width:100%;
+	padding:10px 25px;
+	transition: padding 0.1s linear;
+}
+ul.labal-collapse a:hover{
+	background:#E5E9EF;
+	padding:10px 20px 10px 30px;
+}
+/* -- content轮播主展示部分 -- */
+/*.slice,.slice-right,.show-card,.slice div,img,p{border:0;}*/
+.slice{
+	display: flex;
+}
+.slice-left{
+	border-radius: 3px;
+}
+.slice-right{
+	display: flex;
+	flex-wrap: wrap;
+	height:220px;
+	overflow: hidden;
+}
+.slice-right .show-card{
+	margin:0 0 25px 20px;
+	position: relative;
+}
+.card-hidden{
+	padding:8px 5px 5px;
+	position: absolute;
+	bottom:0px;
+	height: 30px;
+	overflow: hidden;
+	background: linear-gradient(transparent,rgba(0,0,0,.7));
+}
+.card-hidden p{
+	color:white;
+	line-height: 20px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.card-hidden #up-play{
+	display: none;
+	opacity: 0.6;
+	margin-top: 8px;
+}
+.card-hidden .dl{
+	position: absolute;
+	right: 5px;
+	bottom:0;
+	display: none;
+}
+.slice-right .show-card:hover .card-hidden{
+	background:rgba(0,0,0,.7);
+	height:100%;
+	top:0;
+}
+.slice-right .show-card:hover .dl{display: block;}
+.slice-right .show-card:hover #up-play{
+	display: block;
+	transition: all 2s linear;
+}
+/* -- content推广部分 -- */
+/* - left - */
+/* - 公共样式 -*/
+.left-title{
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.left-title>p,.left-title>span,.left-title>a{ float: left;}
+.content .left-title p:nth-child(2){
+	font-size:24px;
+	margin-top:5px; 
+}
+.content .left-title p:nth-child(3){
+	margin:18px 0 0 25px;
+}
+.content .left-title a{
+	margin:18px 0 0 35px;
+}
+.content .list-card{
+	display: flex;
+	flex-wrap: wrap;
+}
+.icon-card{
+	width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    float: left;
+    background: url(../images/icon.png) no-repeat;
+}
+.icon-spread{
+	background-position: -141px -75px;
+}
+.icon-nlive{
+	background-position: -141px -652px;
+}
+.icon-anime{
+	background-position: -141px -908px;
+}
+.icon-manga{
+	background-position: -141px -140px;
+}
+.icon-manga-china{
+	background-position: -140px -1611px;
+}
+.icon-music{
+	background-position: -140px -1675px;
+}
+.icon-dance{
+	background-position: -141px -461px;
+}
+.icon-game{
+	background-position: -141px -203px;
+}
+.icon-science{
+	background-position: -141px -525px;
+}
+.icon-life{
+	background-position: -137px -970px;
+}
+.icon-guichu{
+	background-position: -141px -332px;
+}
+.icon-fashion{
+	background-position: -141px -718px;
+}
+.icon-ad{
+    background-position: -140px -1228px;
+}
+.icon-yule{
+	background-position: -141px -1032px;
+}
+.icon-medium{
+	background-position: -141px -396px;
+}
+.icon-tv{
+	background-position: -141px -845px;
+}
+.icon-yingshi{
+	background-position: -140px -1356px;
+}
+.icon-decoration{
+	background-position: -140px -1292px;
+}
+/* - 下面card部分 - */
+.content .list-card a{
+	margin:0 20px 20px 0;
+	width:160px;
+	height:148px;
+	overflow: hidden;
+}
+
+/* - right - */
+.content .right-title{
+	padding:8px 12px;
+	/*overflow: hidden;*/
+	background:#ddd;
+	border-radius: 3px;
+	margin:16px 0 10px 0;
+}
+.right-title em{
+	display: inline-block;
+	height:10px;
+	border-left:solid 1px #666;
+	margin:0px 11px;
+}
+.content-list-spread .list-right img{
+	border-radius: 3px;
+	/*border:solid 1px black;*/
+}
+/* -- 推广部分 -- */
+/*.content-list-spread a,.content-list-spread div{border:0;}*/
+.content-list-spread .list-card a{margin-bottom:0;}
+.content-list-spread .list-card p{
+	line-height: 20px;
+	transition: all 0.15s linear;
+}
+.spread-hidden{
+	visibility: hidden;
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.15s linear;
+}
+.hidden-con{
+	width: 100%;
+	position: absolute;
+	bottom:0;
+	padding:0 5px;
+}
+.spread-hidden span{
+	display: inline-block;
+	margin-top:4px;
+	color:white;
+}
+.spread-hidden img{float:right;}
+.content-list-spread .list-card a:hover p{color:#00A1D6;}
+.content-list-spread .list-card a:hover .spread-hidden{
+	visibility: visible;
+	background:rgba(0,0,0,.3);
+}
+/* -- content直播live部分 -- */
+/*.content-list-live div,img,a,ul,li{border:0;}*/
+.lazy-img{
+	padding-right:6px;}
+.lazy-img img{
+	width:100%;
+	border-radius: 4px;
+}
+.content .left-title .update-more>div{
+	margin:12px 0 0 10px;
+	padding:2px 10px;
+	border-radius: 3px;
+	border:solid 1px gray;
+	cursor: pointer;
+}
+/*.icon*/
+.another-icon{
+    background: url(../images/icon.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+    width: 12px;
+    height: 13px;
+}
+.icon-update{
+	background-position: -475px -89px;
+	transition:all 0.5s;
+}
+.icon-more{
+	width:6px;
+	background-position: -478px -218px;
+}
+.icon-more-pink{
+	width:6px;
+	margin:-1px 0 0 4px;
+	background-position: -478px -281px;
+}
+.icon-video{
+	background-position: -282px -90px;
+}
+.icon-danmu{
+	background-position: -282px -218px;
+}
+.icon-guanz{background: url(../images/guanzhong.png) no-repeat;}
+.icon-guanzh{background: url(../images/guanzhong2.png) no-repeat;}
+.update-more{
+	float: right;
+	margin-right:25px;
+	display: flex;
+}
+.update-more>div:hover{
+	background:#ddd;
+	transition:all 0.2s;
+}
+.update-more .update:hover .icon-update{
+	transform: rotate(360deg);
+}
+/* -- card -- */
+.live-detail{
+	position: absolute;
+	bottom:0;
+	width:100%;
+	padding:0 4px;
+	background: linear-gradient(transparent,rgba(0,0,0,.7));
+}
+.live-detail span{color:white;}
+.rank-detail,.live-detail span:first-child{
+	display: inline-block;
+	width:70px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.rank-detail,.list-card a>p{width:100%; line-height: 20px}
+.live-detail span:last-child{float:right;}
+.live-hidden{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background:white;
+	color:gray;
+	transition: all 0.2s linear;
+}
+.card-cover {
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	transition: all 0.2s linear;
+}
+.content-list-live .list-card a:hover .card-cover{opacity: 1;}
+.content-list-live .list-card a:hover p{color:#00A1D6;}
+.content-list-live .list-card a:hover .live-hidden{
+	bottom: -20px;
+	color:black;
+}
+/* - right - */
+.tab{
+	display: flex;
+}
+.tab .on{
+	color:#00A1D6;
+	border-bottom:solid 1px #00A1D6;
+}
+.tab .on:before{
+    position: absolute;
+	content: "";
+    /*display: none;*/
+    left: 50%;
+    margin-left: -3px;
+    bottom: 0;
+    border: 3px solid #00a1d6;
+    border-top: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+.tab-item{
+	position: relative;
+	margin: 8px 10px 8px 0 ;
+	padding:4px 0;
+	/*border:solid 1px black;*/
+}
+.item-con{
+	width:270px;
+}
+/* - content - */
+.right-content{
+	margin-top:15px;
+	/*border:solid 1px red;*/
+	width: 900px;
+	display: flex;
+}
+/* - 下面三个中的rank - */
+.rank .rank-list{
+	display: flex;
+	font-size: 12px;
+	margin-bottom: 10px;
+	width: 260px;
+}
+.rank .rank-list span:first-child{
+	background:#f25d8e;
+	width:18px;
+	height:18px;
+	color:white;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 2px;
+	margin-right:5px;
+}
+
+.rank .rank-list img{
+	display: inline-block;
+	height:38px;
+	width: 38px;
+	border-radius: 50%;
+	margin:0 10px 0 0;
+}
+.rank .rank-list .top{
+	display: flex;
+	justify-content: space-between;
+	width:182px;
+} 
+.rank-list span{color:gray;}
+.rank-list .text-ellipsis{width:240px;}
+.rank-detail{
+	margin-top:2px;
+	width:180px;
+}
+.rank-list:hover .up-name{color:#00A1D6;}
+
+/* -- content动画anime部分 -- */
+/* -- card -- */
+/*.content-list-anime div,a{border:0;}*/
+.content-list-anime .live-hidden span{
+	padding-right:25px;
+}
+.content-list-anime .list-card a:hover .spread-hidden{
+	visibility: visible;
+	background:rgba(0,0,0,.3);
+}
+.content-list-anime .list-card a:hover p{color:#00A1D6;}
+.content-list-anime .list-card a:hover .live-hidden{
+	bottom:-20px;
+	color:black;
+}
+.anime-r-title {
+	overflow: hidden;
+}
+.anime-r-title span{
+	float:left;
+	font-size: 18px;
+	line-height: 42px;
+}
+.left-title .tab,.content-list-anime .tab{
+	float:left;
+	margin-left:35px;
+}
+.anime-r-title select{
+	float: right;
+	margin:12px 8px 0 0;
+	padding:2px;
+}
+#anime-f .top{width:140px;}
+#anime-f .top p{
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	overflow: hidden;
+	/*line-height: 18px;*/
+	margin-bottom:3px;
+}
+#anime-f img{
+	width:80px;
+	height:50px;
+	border-radius: 3px;
+}
+.content-list-anime .rank-list{margin-bottom:18px;width:255px;}
+.content-list-anime .rank-list:hover .a-detail{color:#00A1D6;}
+.btn-smore{
+	padding:5px 0;
+	width: 260px;
+	border:0;
+	border-radius: 3px;
+	background: #ddd;
+	cursor: pointer;
+}
+.btn-smore:hover{background: #ccc;transition: all 0.1s linear;}
+
+/* -- content番剧manga部分 -- */
+/*.content-list-manga div,a,ul,li{border:0;}*/
+.content-list-manga .tab{margin-left: 20px}
+.content-list-manga .tab-item{
+	font-size: 18px;
+	padding:5px 0;
+	width:56px;
+	text-align: center;
+	margin:3px 0 0 0;
+}
+.manga-time{
+	float: right;
+	padding:8px 12px;
+	color: #f25d8e;
+	font-size:14px;
+	border:solid 1px #f25d8e;
+	border-radius: 3px;
+	margin:3px 0 0 0;
+}
+.manga-time:hover{
+	background:#f25d8e;
+	color:white;
+	transition: all 0.1s linear;
+}
+.manga-time:hover .icon-more-pink{
+	background-position: -478px -218px;
+	margin-top:3px;
+}
+.content-list-manga .list-left{
+	width:705px;
+}
+.content-list-manga .rank-list span:last-child{
+	margin-left: 10px;
+}
+.scroll-card{
+	overflow: auto;
+	height:400px;
+}
+.card-list{
+	float: left;
+	overflow: hidden;
+	padding:0 45px 40px 0;
+}
+.card-list img{
+	float: left;
+	height: 68px;
+	width:68px;
+	border-radius: 3px
+}
+.card-list .card-right{
+	float: left;
+	margin-left:12px;
+	position: relative;
+	height:68px;
+	width:100px;
+}
+.card-list .update{
+	position: absolute;
+	bottom: 0;
+	font-size: 12px;
+}
+.update span{color:gray;}
+.update a{
+	display: inline-block;
+	text-align: center;
+	background:#f25d8e;
+	color:white;
+	border-radius: 13px;
+	width:38px;
+	/*padding:0 4px ;*/
+	margin-left: 8px;
+}
+.content-list-manga .anime-r-title{padding:0;}
+.content-list-manga .rank-list{margin-bottom:19px;}
+.content-list-manga .rank-list a{max-width: 145px;}
+/* -- content番剧动态mangaActive部分 -- */
+.anime-active{font-size: 18px;margin-top:10px;}
+/*.content-list-mangaActive div,a{border:0;}*/
+.content-list-mangaActive .anime-r-title{padding:8px 0 4px 0;}
+.content-list-mangaActive .anime-r-title span{line-height: 30px}
+.content-list-mangaActive .right-content img{
+	border-radius: 5px;
+}
+/* -- content国漫动态manga-china部分 -- */
+.manga-china .scroll-card{height:290px;}
+.manga-china .right-content img{
+	margin-top:10px;
+	border-radius: 5px;
+}

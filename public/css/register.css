@@ -1,0 +1,81 @@
+/*div{border:solid 1px black;}*/
+a{font-size:12px;}
+.top{
+	background: #00A0D8;
+	text-align: center;
+	height:86px;
+}
+.m-register{
+	width: 980px;
+	height:992px;
+	margin:20px auto;
+}
+.rg-title{
+	height:28px;
+	text-align: center;
+	border-bottom:solid 1px #DDDDDD;
+}
+.rg-title span{
+	font-size: 40px;
+	background: white;
+	padding:0 20px;
+}
+.rg-content {
+	width:420px;
+	margin:50px auto;
+	text-align: center;
+}
+input,select{
+	box-sizing: border-box;
+	height:40px;
+	border:solid 1px #DCDFE6;
+	border-radius: 4px;
+	padding:0 15px;
+	color:#757575;
+	width:100%;
+}
+.rg-list div{
+	height:38px;
+	line-height:38px;
+	text-align: left;
+}
+div.align-left{
+	text-align: left;
+}
+div.align-right{
+	text-align: right;
+}
+.rg-select select{
+	width:30%;
+	box-sizing: border-box;
+}
+.rg-select input{
+	width:69%;
+	margin-left:-3px;
+	box-sizing: border-box;
+}
+.btn-get{
+	position:absolute;
+	right:0;
+	top:0;
+	height:40px;
+	width:120px;
+	color:white;
+	background:#00A7DE;
+	outline: 0;
+	border:0;
+	border-radius: 4px;
+
+}
+.rg-check{
+	padding:8px 0;
+	text-align: left;
+}
+input[type=checkbox]{
+	height:16px;
+	width:16px;
+	background:white;
+}
+input[type=submit]{
+	background:white;
+}

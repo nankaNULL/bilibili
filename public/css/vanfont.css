@@ -1,0 +1,87 @@
+@font-face{
+	font-family:vanfont;
+	src:url(//s1.hdslb.com/bfs/static/jinkela/video/font/iconfont.6f84c4e.eot);
+	src:url(iconfont.412189e.woff) format("woff"),url(//s1.hdslb.com/bfs/static/jinkela/video/font/iconfont.0b40a61.ttf) format("truetype"),url(//s1.hdslb.com/bfs/static/jinkela/video/images/iconfont.8d945a9.svg#iconfont) format("svg")
+}
+.vanfont{
+	display:inline-block;font-style:normal;
+	vertical-align:baseline;
+	text-align:center;
+	text-transform:none;
+	line-height:1;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale
+}
+.vanfont:before{
+	display:block;
+	font-family:vanfont!important
+}
+[class^=van-icon-]{
+	display:inline-block;
+	font-style:normal;
+	vertical-align:baseline;
+	text-align:center;
+	text-transform:none;
+	line-height:1;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+[class^=van-icon-]:before{display:block;font-family:vanfont!important}
+.van-icon-rotate:before{display:inline-block;-webkit-animation:loadingCircle 1s infinite linear;animation:loadingCircle 1s infinite linear}
+.van-icon-error:before{content:"\E62B"}
+.van-icon-serach:before{content:"\E62F"}
+.van-icon-info:before{content:"\E67D"}
+.van-icon-loading:before{content:"\EEE3"}
+.van-icon-warning:before{content:"\E664"}
+.van-icon-success:before{content:"\E6F7"}
+.van-icon-jianpan:before{content:"\E616"}
+.van-icon-lv0:before{content:"\E6CB"}
+.van-icon-lv1:before{content:"\E6CC"}
+.van-icon-lv2:before{content:"\E6CD"}
+.van-icon-lv3:before{content:"\E6CE"}
+.van-icon-lv4:before{content:"\E6CF"}
+.van-icon-lv5:before{content:"\E6D0"}
+.van-icon-lv6:before{content:"\E6D1"}
+.van-icon-close:before{content:"\E604"}
+.van-icon-fasong:before{content:"\E666"}
+.van-icon-cai:before{content:"\E638"}
+.van-icon-pinglun:before{content:"\E639"}
+.van-icon-ding:before{content:"\E63A"}
+.van-icon-guanbi:before{content:"\E63C"}
+.van-icon-gengduo:before{content:"\E63D"}
+.van-icon-biaoqing:before{content:"\E63E"}
+.van-icon-videodetails_play:before{content:"\E6E3"}
+.van-icon-videodetails_messag:before{content:"\E6E5"}
+.van-icon-info_playnumber:before{content:"\E6E6"}
+.van-icon-info_barragenumber:before{content:"\E6E7"}
+.van-icon-info_rank:before{content:"\E6E8"}
+.van-icon-info_prohibit:before{content:"\E6E9"}
+.van-icon-general_moreactions:before{content:"\E6EA"}
+.van-icon-general_pulldown_s:before{content:"\E6EB"}
+.van-icon-general_pullup_s:before{content:"\E6EC"}
+.van-icon-general_more:before{content:"\E6ED"}
+.van-icon-general_close_s:before{content:"\E6EE"}
+.van-icon-general_addto_s:before{content:"\E6EF"}
+.van-icon-videodetails_collec:before{content:"\E6E1"}
+.van-icon-videodetails_usemo:before{content:"\E6E2"}
+.van-icon-videodetails_throw:before{content:"\E6E4"}
+.van-icon-videodetails_like:before{content:"\E6E0"}
+.van-icon-general_enter_s:before{content:"\E6F0"}
+.van-icon-general_back_s:before{content:"\E6F1"}
+.van-icon-floatwindow_custome:before{content:"\E6F2"}
+.van-icon-share_weibo_default:before{content:"\E71C"}
+.van-icon-share_tieba_default:before{content:"\E71D"}
+.van-icon-share_wechat_default:before{content:"\E721"}
+.van-icon-tuodong:before{content:"\E665"}
+.van-icon-share_qq_default:before{content:"\E71E"}
+.van-icon-share_news_default:before{content:"\E71F"}
+.van-icon-share_qzone_default:before{content:"\E720"}
+.van-icon-info_up:before{content:"\E723"}
+.van-icon-Navbar_mobile:before{content:"\E724"}
+.van-icon-Navbar_logo:before{content:"\E725"}
+.van-icon-download:before{content:"\E744"}
+.van-icon-general_viewlist:before{content:"\E706"}
+.van-icon-general_viewmodule:before{content:"\E707"}
+.van-icon-videodetails_share:before{content:"\E70F"}

@@ -1,0 +1,118 @@
+body,img,p,ul{
+	padding:0;
+	margin:0;
+	font-size:14px;
+}
+/*div,img{border:solid 1px black;}*/
+ul{list-style: none;}
+.top{
+	background: #00A0D8;
+	text-align: center;
+	height:86px;
+}
+.m-login{
+	width: 980px;
+	height:460px;
+	margin:20px auto;
+}
+.lg-title{
+	height:28px;
+	text-align: center;
+	border-bottom:solid 1px #DDDDDD;
+}
+.lg-title span{
+	font-size: 40px;
+	background: white;
+	padding:0 20px;
+}
+.lg-content{padding-top:50px;}
+.lg-l{
+	float: left;
+	text-align: center;
+	width:490px;
+	padding-top:50px;
+}
+.icon-tv{
+	position: absolute;
+	left: 160px;
+    top: -12px;
+	display: inline-block;
+	background: url(../images/e6f2388d454c82004905753802e9cfe709d80d08.png);
+	width:70px;
+	height:70px;
+}
+.left-b {
+	background: url(../images/2233login.af9c53d.png) no-repeat;
+	height:180px;
+}
+.left-b p:first-child{
+	margin:20px 0 8px;
+	font-size: 18px;
+	letter-spacing: 3px;
+}
+/* -- 右边 form -- */
+.lg-r{
+	float: right;
+	width:485px;
+	border-left:solid 1px #DDDDDD;
+	padding:0 0 20px 40px ;
+}
+.lg-r ul{width:410px;}
+input[type=text],input[type=password]{
+	border:solid 1px #F66495;
+	height:40px;
+	width:410px;
+	padding:0 10px;
+	font-size: 14px;
+}
+.t-warn,input,.lg-list span,.lg-list a{font-size: 12px;}
+.t-warn{
+	color:#F66495;
+	padding:8px 0 ;
+}
+input[type=checkbox]{
+	margin:10px 3px 10px 0;
+}
+input[type=checkbox]~span{
+	margin-left:10px;
+	color:#666;
+}
+input[type=checkbox]~a{
+	float: right;
+	margin:10px 2px;
+}
+a.lg-btn{
+	display: inline-block;
+	height:36px;
+	width:186px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 36px;
+	background-color:white;
+	border:solid 1px #CCCCCC;
+	outline: 0;
+	cursor: pointer;
+	border-radius: 2px;
+}
+a.btn-login{
+	background: #00A7DE;
+	color:white;
+	border:solid 1px #0381AA;
+	margin-right:34px;
+}
+.lg-list:last-child{ margin-top:8px; }
+.lg-list:last-child span{
+	background: url(../images/sina-qq.png) no-repeat;
+	display: inline-block;
+	width:21px;
+	height:21px;
+	vertical-align: middle;
+	margin-right:5px;
+}
+#icon-qq{
+	background-position: 0 -41px;
+	margin-left:20px;
+}
+/*.btn-register*/
+/*js中一切都是关联数组？？？*/
+/*字符串是不可变类型*/

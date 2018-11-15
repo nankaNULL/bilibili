@@ -1,0 +1,45 @@
+$txt-black:#333;
+$border-gray:#DCDCDC;
+$bl-blue:#00A1D6;
+$bl-pink:#f25d8e;
+a{color:$txt-black}
+// --- header部分 ---
+.nav{
+    background:white;
+    padding: 0 20px 0 50px;
+    width: 100%;
+    border-bottom:solid 1px $border-gray;
+}
+.nav-content{
+    width:992px;
+	margin:0 auto;
+	display: flex;
+    justify-content: space-between;
+    
+    ul{height:38px;}
+    li{
+        float:left;
+        margin-right:18px;
+        a{
+            display: inline-block;
+            padding:10px 0;
+        }
+    }
+    .isLogin{display: none}
+    .p-img{
+        padding:0;
+        img{
+            border-radius: 50%;
+            width:38px;
+            height:38px;
+        }
+    }
+    #tg{
+        height:45px;
+        padding:10px 15px 0;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background:$bl-pink;
+        color:white;
+    }
+}

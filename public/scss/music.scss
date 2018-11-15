@@ -1,0 +1,468 @@
+$bl_blue:#00a1d6;
+$text_gray:#99a2aa;
+$border_blue:#32b0da;
+$bg_lightblue:rgba(50,176,218,.3);
+// div,ul,li{border:solid 1px red}
+ul{list-style: none}
+.clearfix{overflow: hidden;}
+#app{
+    margin:0 auto;
+    width:1040px;
+}
+//icon
+.iconfont{
+    font-family: iconfont!important;
+    font-size: 12px;
+    cursor: pointer;
+}
+i{
+    &.play-icon {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        width: 24px;
+        height: 26px;
+        line-height: 26px;
+        color:#fff;
+        padding-left: 2px;
+        border: 1px solid hsla(0,0%,100%,.6);
+        border-radius: 14px;
+    }
+    &.listen-icon{}
+}
+
+// 轮播
+.slider{
+    position: relative;
+    ul.slider-con{
+        overflow: hidden;
+        position: relative;
+        width:100%;
+        li.slider-item{
+            position: absolute;
+            left:0;
+            top:0;
+            width:100%;
+            visibility: hidden;
+            transition: visibility 1s linear;
+            &.active{
+                visibility: visible;
+            }
+            &>a{
+                display: inline-block;
+                position: relative;
+                img{width:100%;}
+                &>div{
+                    position: absolute;
+                    text-indent: 20px;
+                    bottom: 3px;
+                    width:100%;
+                    height:28px;
+                    line-height: 23px;
+                    background:linear-gradient(-180deg,transparent,rgba(0,0,0,.4));
+                    color:white;
+                }
+            }
+        }
+    }
+    ul.slider-dot{
+        position: absolute;
+        bottom:0;
+        right:12px;
+        overflow: hidden;
+        li.dot-item{
+            float: left;
+            margin: 5px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            button.btn-dot{
+                padding: 0;
+                border: 0;
+                outline: 0;
+                width: 10px;
+                height: 10px;
+                background: #fff;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            &.active{
+                background:url(../images/slider_icon.png) no-repeat 50%;
+                background-size: 100%;
+                button.btn-dot{
+                    background:transparent;
+                }
+            }
+        }
+    }
+}
+// 分页
+.pagination{
+    a{
+        display: inline-block;
+        height:16px;
+        width:16px;
+        // border:solid 1px red;
+        text-align: center;
+        line-height:16px;
+        margin:0 2px;
+        color:#222;
+        font-size: 12px;
+        &.pagination-item{
+            &.active,&:hover{
+                color:$bl_blue;
+            }
+        }
+        &.prev,&.next{
+            color:#fff;
+            background:#ccd0d7;
+            border-radius: 50%;
+            &:hover{
+                background:$bl_blue;
+            }
+        }
+    }
+}
+.m-model{
+    margin:30px 0 40px 0;
+    &>div.mod-title{
+        &,&>span{font-size: 24px;}
+        margin-bottom:20px;
+    }
+}
+// 歌单样式
+.music-list{
+    float: left;
+    width: 200px;
+    margin: 0 10px 20px 0;
+    // 歌单推荐上面的图片
+    div.list-img{
+        margin:0 auto;
+        position: relative;
+        width:166px;
+        height: 166px;
+        background:$bg_lightblue;
+        border: 1px solid $border_blue;
+        border-radius: 4px;
+        cursor: pointer;
+        img{
+            display: block;
+            border-radius: 4px;
+        }
+        img,div{
+            position: absolute;
+            width:168px;
+            height: 168px;
+            top:12px;
+            left:-12px;
+        }
+        div{
+            display: none;
+            background:rgba(0,0,0,.25); 
+        }
+        &:hover div{display: block;}
+    }
+    div.list-con{
+        margin: 16px 42px 0 6px;
+        p{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        p:first-child{
+            height:40px;
+            a{
+                color:#222;
+                &:hover{color:$bl_blue}
+            }
+        }
+        p:last-child{
+            position: relative;
+            i,span{color:#99a2aa}
+        }
+    }
+    &:hover div.list-con p>a{color:$bl_blue}
+}
+// 歌单推荐
+.m-recommend{
+    ul{
+        overflow: hidden;
+        li.music-list:nth-child(5n){
+            margin-right:0;
+        }
+    }
+}
+// 热门榜单
+.m-rank{
+    .rank-content{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        .rank-list{
+            width:320px;
+            // margin-right:40px;
+            .rlist-title{
+                display:flex;
+                width:100%;;
+                &>img{
+                    display: inline-block;
+                    width: 140px;
+                    height: 140px;
+                    border-radius:4px;
+                    margin: 20px 16px 20px 20px;
+                }
+                &>div{
+                    position: relative;
+                    padding:40px 0 20px 0;
+                    a{
+                        color:#333;
+                        font-weight: bold;
+                    }
+                    .play{
+                        position: absolute;
+                        bottom:20px;
+                        background: $bl_blue;
+                        width: 120px;
+                        height: 40px;
+                        border-radius: 4px;
+                        text-align: center;
+                        i{}
+                        span{
+                            color:white;
+                            line-height: 40px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            &>ul{
+                border-right:solid 1px #e5e9ef;
+                border-left:solid 1px #e5e9ef;
+                padding: 0 16px 9px 16px;
+                li.rlist-item{
+                    display: flex;
+                    height:54px;
+                    line-height: 54px;
+                    cursor: pointer;
+                    &:hover{
+                        a.title{color:$bl_blue}
+                    }
+                    span{
+                        color: $text_gray;
+                        text-align: center;
+                    }
+                    &>span{
+                        margin-right: 12px;
+                        width: 20px;
+                    }
+                    div.item-title{
+                        position: relative;
+                        width: 100%;
+                        overflow: hidden;
+                        a,i{float: left;}
+                        a{
+                            display: inline-block;
+                            width:192px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-size: 14px;
+                            cursor: pointer;
+                            color:#333;
+                        }
+                        i{
+                            display: none;
+                            width: 18px;
+                            height: 18px;
+                            border: 1px solid #e5e9ef;
+                            border-radius: 10px;
+                            color: #99a2aa;
+                            margin-top: 17px;
+                            vertical-align: top;
+                        }
+                        span{
+                            position: absolute;
+                            right: 0;
+                        }
+                        &:hover{
+                            i{
+                                display: inline-block;
+                                &:hover{
+                                    border:solid 1px $bl_blue;
+                                }
+                            }    
+                        }
+                    }
+                }
+            }
+            div.item-more{
+                a{
+                    display: inline-block;
+                    text-align: center;
+                    width:100%;
+                    height:52px;
+                    line-height:52px;
+                    border:solid 1px #e5e9ef;
+                    span,i{
+                        color: $text_gray;}
+                        &:hover{
+                            span,i{color: $bl_blue;}
+                        }
+                }
+                
+            }
+        }
+    }
+    
+    
+}
+//全部榜单
+.m-allrank{
+    .mod-title{
+        overflow: hidden;
+        div.pagination{
+            float: right;
+            margin-top:5px;
+        }
+    }
+    .ar-content>ul{
+        overflow: hidden;
+        li.arank-list{
+            position: relative;
+            float: left;
+            margin: 0 20px 0 10px;
+            cursor: pointer;
+            &>img,&>div.cover{
+                width:180px;
+                height:180px;
+            }
+            &>img{
+                display: inline-block;
+                border-radius: 4px;
+            }
+            &>a{
+                display: block;
+                color:#222;
+            }
+            &>div.cover{
+                position: absolute;
+                top:0;
+                left: 0;
+                display: none;
+                background:rgba(0,0,0,.25); 
+            }
+            &:hover{
+                div.cover{display:block}
+                a{color:$bl_blue}
+            }
+            &:nth-child(5n){
+                margin-right:0;
+            }
+        }
+    }
+}
+// 我的音乐
+.m-mymusic{
+    .mod-title{
+        overflow: hidden;
+        &>span{float: left;}
+        ul.tab{
+            float: left;
+            overflow: hidden;
+            li.tab-list{
+                float: left;
+                position: relative;
+                margin-left:20px;
+                padding:3px 0;
+                cursor: pointer;
+                &:hover{
+                    color:$bl_blue;
+                }
+                &.active{
+                    color:$bl_blue;
+                    border-bottom:solid 1px $bl_blue;
+                    &>em{
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        border-left: 3px solid transparent;
+                        border-right: 3px solid transparent;
+                        border-bottom: 3px solid $bl_blue;
+                    }
+                }
+            }
+        }
+    }
+    .per-content{
+        div.per-collect{
+            display: none;
+            &>div.empty{
+                text-align: center;
+                padding:26px 0 40px;
+                &>div:first-child{
+                    img{margin:0 auto;}
+                }
+                &>p{
+                    margin:16px 0;
+                }
+            }
+        }
+    }
+}
+// 音乐人推荐
+.m-musician{
+    .mod-title{
+        overflow: hidden;
+        &>span{
+            float: left;
+        }
+        &>div{
+            float:right;
+            line-height: 24px;
+            margin-top:8px;
+            width: 74px;
+            border: 1px solid #ccd0d7;
+            border-radius: 4px;
+        }
+    }
+    .musician-con{
+        ul{
+            display: flex;
+            justify-content: space-around;
+            li.card-list{
+                width: 320px;
+                // height: 162px;
+                border: 1px solid #e5e9ef;
+                border-radius: 4px;
+                overflow: hidden;
+                &>a,&>div{float: left;}
+                a>img{
+                    display: inline;
+                    width: 96px;
+                    height: 96px;
+                    margin:34px 27px 34px 34px;
+                    border-radius: 50%;
+                }
+                &>div{
+                    margin:34px 0;
+                    &>span,&>p{line-height: 30px;}
+                    &>span{
+                        color:$text_gray;
+                    }
+                    &>div.btn-listen{
+                        margin-top:9px;
+                        width: 98px;
+                        height: 28px;
+                        border:1px solid $bl_blue;
+                        border-radius: 4px;
+                        color:$bl_blue;
+                        text-align: center;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
