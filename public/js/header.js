@@ -1,7 +1,7 @@
 $(function(){
     //ajax获取header片段
     $.ajax({
-        url:"http://localhost:3000/html/header.html",
+        url:"http://localhost:3000/header.html",
         type:"get",
         success:function(res){
             $("header").replaceWith(res);

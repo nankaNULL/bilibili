@@ -7,11 +7,36 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/slider.css">
+		<link rel="stylesheet" href="css/index_copy.css">
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/iconfont.css">
 		<style>
 			header .header{background:white !important; }
-			.nav{background:rgba(255,255,255,.4) !important;}
+			.nav{background:rgba(255,255,255,.4) !important;border:0 !important;}
+			/* -- 轮播 -- */
+			.slide-left>.slider{
+                /* 轮播图片大小 */
+                /*width: 500px;*/
+            }
+            .slider ul.slider-dot li.dot-item {
+                /* 覆盖圆点的小图片的大小 */
+                /*width:8px;
+                height:8px;*/
+            }
+            .slider ul.slider-dot li.dot-item button.btn-dot{
+                /* 原点大小 */
+                /*width:10px;
+                height: 10px;*/
+            }
+            /* 这个不放后面了，感觉会出错，如果有图片这样改 */
+            .slider ul.slider-dot li.dot-item.active {
+                background: url(images/slider_icon.png) no-repeat 50%;
+                background-size: 100%; }
+            /* 如果没有图片 */
+            .slider ul.slider-dot li.dot-item.active button.btn-dot {
+                /*background: lightcoral;*/ 
+            }
 		</style>
 	</head>
 	<body>
@@ -34,7 +59,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="content">
+		<div class="content" id="app">
 			<div class="label-list">
 				<ul>
 					<li>
@@ -209,11 +234,51 @@
 					</li>
 				</ul>
 			</div>
-			<div class="slice">
-				<div class="slice-left">
-					<img src="images/ee8b9b847c091e97a4fedd95df37811f8bb452c2.jpg" alt="">
+			<div class="content-slider">
+				<div class="slider-left">
+					<div class="slider">
+						<ul class="slider-con">
+							<li class="slider-item active" data-slider="0">
+								<a href="javascript:void(0)">
+									<img src="images/archive/slider1.jpg">
+									<div>小雀斑惨遭吐槽</div>
+								</a>
+							</li>
+							<li class="slider-item">
+								<a href="javascript:void(0)">
+										<img src="images/archive/slider2.jpg">
+									<div>捕猎的时机到了~！</div>
+								</a>
+							</li>
+							<li class="slider-item">
+								<a href="javascript:void(0)">
+									<img src="images/archive/slider3.jpg">
+									<div>神奇动物2火爆热映中</div>
+								</a>
+							</li>
+							<li class="slider-item">
+								<a href="javascript:void(0)">
+										<img src="images/archive/slider4.jpg">
+									<div>嗅嗅是我的！</div>
+								</a>
+							</li>
+							<li class="slider-item">
+								<a href="javascript:void(0)">
+										<img src="images/archive/slider5.jpg">
+									<div>有些欣慰，有些难受，更有开心在里面</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="slider-dot">
+							<li class="dot-item active"><button class="btn-dot"></button></li>
+							<li class="dot-item"><button class="btn-dot"></button></li>
+							<li class="dot-item"><button class="btn-dot"></button></li>
+							<li class="dot-item"><button class="btn-dot"></button></li>
+							<li class="dot-item"><button class="btn-dot"></button></li>
+						</ul>
+					</div>
 				</div>
-				<div class="slice-right">
+				<div class="slider-right">
 					<a href="#" class="show-card" title="【漫画屋】小学生惨遭怪物吞食！为寻求生路展开烧脑越狱！">
 						<div>
 							<img src="images/card1.jpg" alt="【漫画屋】小学生惨遭怪物吞食！为寻求生路展开烧脑越狱！">
@@ -652,16 +717,18 @@
 								</li>
 							</ul>
 						</div>
-						<div class="item-con "></div>
+						<div class="item-con">
+							<p>没有数据(-_-#)</p>
+						</div>
 						<div class="item-con tuijian">
 							<a href="#">
 								<div>
-									<img src="" alt="">
+									<img src="./images/archive/fdd91a4c5a60493af08e2b2f9f9e1079e5a1fdc7.png" alt="">
 								</div>
 							</a>
 							<div>
-								<a href="#"><img src="" alt=""></a>
-								<a href="#"><img src="" alt=""></a>
+								<a href="#"><img src="./images/wh2.png" alt=""></a>
+								<a href="#"><img src="./images/sp2.png" alt=""></a>
 							</div>
 						</div>
 					</div>
@@ -932,9 +999,63 @@
 									</div>
 								</li>
 							</ul>
-							<button class="btn-smore">查看更多</button>
+						</div>
+						<div class="item-con rank">
+							<ul>
+								<li>
+									<div class="rank-list" id="anime-f">
+										<span>1</span>
+										<a href="#"><img src="images/anime1.webp" alt=""></a>
+										<a href="#">
+											<div>
+												<div class="top">
+													<p class="a-detail">何为营销号？用爱发电对UP主而言意味着什么？网络原创生态的窘迫现状及其成因【动话说#02】</p>
+												</div>
+												<span>综合评分：338.6万</span>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="rank-list">
+										<span>2</span>
+										<a href="#" class="text-ellipsis">【新番咋了35】十月新番观看推荐！约战3预告片独家发布中（滑稽+完美肌</a>
+									</div>
+								</li>
+								<li>
+									<div class="rank-list">
+										<span>3</span>
+										<a href="#" class="text-ellipsis">【动画VS真人】史上最可怕的莫过于真人化而且还是高还原！ 播放:624098 9:07</a>
+									</div>
+								</li>
+								<li>
+									<div class="rank-list">
+										<span>4</span>
+										<a href="#" class="text-ellipsis">刀剑神域第三季第1集抢先看！一小时超长内容情报前瞻！</a>
+									</div>
+								</li>
+								<li>
+									<div class="rank-list">
+										<span>5</span>
+										<a href="#" class="text-ellipsis">当着正宫的面亲吻男主！会发生什么？巨型吃醋现场！</a>
+									</div>
+								</li>
+								<li>
+									<div class="rank-list">
+										<span>6</span>
+										<a href="#" class="text-ellipsis">史上最骚后宫漫画！全校女生都想着调戏我？我们还能不能一起学习？</a>
+									</div>
+								</li>
+								<li>
+									<div class="rank-list">
+										<span>7</span>
+										<a href="#" class="text-ellipsis">【梗百科67】全是女生？根本不需要男人？？？更多妹子更多老婆更多快乐！！</a>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
+					<button class="btn-smore">查看更多</button>
 				</div>
 			</div>
 			<div class="content-list-manga list-module">
@@ -944,114 +1065,23 @@
 						<i class="icon-card icon-manga"></i>
 						<p>番剧</p>
 						<div class="tab">
-							<div class="tab-item on">最新</div>
-							<div class="tab-item">一</div>
-							<div class="tab-item">二</div>
-							<div class="tab-item">三</div>
-							<div class="tab-item">四</div>
-							<div class="tab-item">五</div>
-							<div class="tab-item">六</div>
-							<div class="tab-item">日</div>
+							<div class="tab-item on" @click="getManga()">最新</div>
+							<div class="tab-item" @click="getManga('mon')">一</div>
+							<div class="tab-item" @click="getManga('tues')">二</div>
+							<div class="tab-item" @click="getManga('wed')">三</div>
+							<div class="tab-item" @click="getManga('thur')">四</div>
+							<div class="tab-item" @click="getManga('fri')">五</div>
+							<div class="tab-item" @click="getManga('sat')">六</div>
+							<div class="tab-item" @click="getManga('sun')">日</div>
 						</div>
 						<div class="manga-time">新番时间表<i class="another-icon icon-more-pink"></i></div>
 					</div>
 					<div class="scroll-card">
-						<div class="card-list">
-							<img src="images/manga1.webp" alt="">
+						<div class="card-list" v-for="manga in mangas">
+							<img :src="manga.img_url" alt="">
 							<div class="card-right">
-								<a href="#" title="昴宿七星">昴宿七星</a>
-								<p class="update"><span>更新至<a href="#">12话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga2.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="千绪的上学路">千绪的上学路</a>
-								<p class="update"><span>更新至<a href="#">12话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga3.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="美妙☆频道">美妙☆频道</a>
-								<p class="update"><span>更新至<a href="#">27话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga4.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="爱玩怪兽">爱玩怪兽</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga5.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="刀剑神域 Alicization">刀剑神域 Alicization</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga6.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="逆转裁判 第二季">逆转裁判 第二季</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga7.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="剧场版 K Seven Stories">剧场版 K Seven Stories</a>
-								<p class="update"><span>更新至<a href="#">4-1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga1.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="昴宿七星">昴宿七星</a>
-								<p class="update"><span>更新至<a href="#">12话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga2.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="千绪的上学路">千绪的上学路</a>
-								<p class="update"><span>更新至<a href="#">12话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga3.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="美妙☆频道">美妙☆频道</a>
-								<p class="update"><span>更新至<a href="#">27话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga4.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="爱玩怪兽">爱玩怪兽</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga5.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="刀剑神域 Alicization">刀剑神域 Alicization</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga6.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="逆转裁判 第二季">逆转裁判 第二季</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga7.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="剧场版 K Seven Stories">剧场版 K Seven Stories</a>
-								<p class="update"><span>更新至<a href="#">4-1话</a></span></p>
+								<a href="#" :title="manga.title">{{manga.title}}</a>
+								<p class="update"><span>更新至<a href="#">{{manga.episode}}话</a></span></p>
 							</div>
 						</div>
 					</div>
@@ -5432,8 +5462,48 @@
 				</div>
 			</div> -->
 		</div>
-		<iframe src="html/footer.html" frameborder="0" width="100%" height="400px" scrolling="no"></iframe>
-		<script src="../js/jquery-3.2.1.js"></script>
-		<script src="../js/header.js"></script>
+		<iframe src="footer.html" frameborder="0" width="100%" height="400px" scrolling="no"></iframe>
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/slider.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/vue.js"></script>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					mangalists:[
+						{id:1,title:"昴宿七星",episode:12,img_url:"images/manga1.webp",time:"mon"},
+						{id:2,title:"千绪的上学路",episode:12,img_url:"images/manga2.webp",time:"tues"},
+						{id:3,title:"美妙☆频道",episode:27,img_url:"images/manga3.webp",time:"wed"},
+						{id:4,title:"爱玩怪兽",episode:1,img_url:"images/manga4.webp",time:"thur"},
+						{id:5,title:"刀剑神域 Alicization",episode:1,img_url:"images/manga5.webp",time:"fri"},
+						{id:6,title:"逆转裁判 第二季",episode:1,img_url:"images/manga6.webp",time:"sat"},
+						{id:7,title:"剧场版 K Seven Stories",episode:4-1,img_url:"images/manga7.webp",time:"sun"},
+						{id:8,title:"昴宿七星",episode:12,img_url:"images/manga1.webp",time:"tues"},
+						{id:9,title:"千绪的上学路",episode:12,img_url:"images/manga2.webp",time:"wed"},
+						{id:10,title:"美妙☆频道",episode:27,img_url:"images/manga3.webp",time:"thur"},
+						{id:11,title:"爱玩怪兽",episode:1,img_url:"images/manga4.webp",time:"mon"},
+						{id:12,title:"刀剑神域 Alicization",episode:1,img_url:"images/manga5.webp",time:"mon"},
+						{id:13,title:"逆转裁判 第二季",episode:1,img_url:"images/manga6.webp",time:"mon"},
+						{id:14,title:"剧场版 K Seven Stories",episode:4-1,img_url:"images/manga7.webp",time:"mon"},
+					],
+					mangas:[],
+				},
+				methods:{
+					getManga(time){
+						this.mangas = [];
+						for(let manga of this.mangalists){
+							console.log(time);
+							if(!time) this.mangas.push(manga);
+							if(manga.time == time){
+								this.mangas.push(manga);
+							}
+						}
+					}
+				},
+				
+			})
+		</script>
 	</body>
 </html>

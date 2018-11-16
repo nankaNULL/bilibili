@@ -14,52 +14,16 @@ div,ul,li,a,p{
 .header{
 	background:url(../images/bg.png) no-repeat center ;
 }
-.nav-content,.header-content{
-	width:992px;
+.header-content{
+	width:980px;
 	margin:0 auto;
 	display: flex;
 	justify-content: space-between;
 }
 .header a{display: inline-block;}
 /* -- header部分的顶部nav -- */
-.nav{
-	background:rgba(255,255,255,.4);
-	padding: 0 20px 0 50px;
-	width: 100%;
-}
-.nav-content li{
-	float:left;
-	padding:0 8px;
-}
 .nav-content li:hover{
 	background:rgba(255,255,255,.4);
-}
-li.nav-index{padding-left:28px;}
-.bili-icon{
-	background:url(../images/icon.png);
-	position: absolute;
-    width: 17px;
-    height: 14px;
-    left: 8px;
-    top: 11px;
-    background-position: -919px -88px;
-}
-.nav-content ul:last-child{
-	height:38px;
-}
-#tg{
-	height:45px;
-	padding:10px 15px 0;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-.nav a{
-	padding:10px 0;
-}
-.p-img{
-	border-radius: 50%;
-	width:38px;
-	height:38px;
 }
 
 /* -- header部分的中间背景logo&search -- */
@@ -109,7 +73,7 @@ span.icon-rank{
 
 /* --- 中间大块content部分 --- */
 .content{
-	width:994px;
+	width:980px;
 	margin:0 auto;
 	/*overflow: hidden;*/
 }
@@ -127,14 +91,16 @@ span.icon-rank{
 /* - 所有content左右分布尺寸- */
 .list-left{
 	float:left;
-	width:724px;
+	width:713px;
 	/*border:solid 1px black;*/
 }
 .list-right{
+	position: relative;
 	margin-right:6px;
 	float:right;
 	width:260px;
 	/*border:solid 1px black;*/
+	overflow: hidden;
 }
 /* -- content最上面的label -- */
 /*.label-list,.label-list ul,.label-list li,.label-list a,.label-list span,.label-list p{border:0;}*/
@@ -210,13 +176,14 @@ ul.labal-collapse a:hover{
 }
 /* -- content轮播主展示部分 -- */
 /*.slice,.slice-right,.show-card,.slice div,img,p{border:0;}*/
-.slice{
+/* .slide{
 	display: flex;
 }
-.slice-left{
+.slide-left{
 	border-radius: 3px;
-}
-.slice-right{
+} */
+/* .slider-right{
+	float: left;
 	display: flex;
 	flex-wrap: wrap;
 	height:220px;
@@ -262,7 +229,7 @@ ul.labal-collapse a:hover{
 .slice-right .show-card:hover #up-play{
 	display: block;
 	transition: all 2s linear;
-}
+} */
 /* -- content推广部分 -- */
 /* - left - */
 /* - 公共样式 -*/
@@ -282,8 +249,9 @@ ul.labal-collapse a:hover{
 	margin:18px 0 0 35px;
 }
 .content .list-card{
-	display: flex;
-	flex-wrap: wrap;
+	/* display: flex;
+	flex-wrap: wrap; */
+	overflow: hidden;
 }
 .icon-card{
 	width: 40px;
@@ -348,10 +316,14 @@ ul.labal-collapse a:hover{
 }
 /* - 下面card部分 - */
 .content .list-card a{
+	float: left;
 	margin:0 20px 20px 0;
 	width:160px;
 	height:148px;
 	overflow: hidden;
+}
+.content .list-card a:nth-child(4n){
+	margin-right:0;
 }
 
 /* - right - */
@@ -498,8 +470,11 @@ ul.labal-collapse a:hover{
 	bottom: -20px;
 	color:black;
 }
+/* .content-list-live .list-right{
+	position: relative;
+} */
 /* - right - */
-.tab{
+/* .tab{
 	display: flex;
 }
 .tab .on{
@@ -509,7 +484,6 @@ ul.labal-collapse a:hover{
 .tab .on:before{
     position: absolute;
 	content: "";
-    /*display: none;*/
     left: 50%;
     margin-left: -3px;
     bottom: 0;
@@ -522,17 +496,25 @@ ul.labal-collapse a:hover{
 	position: relative;
 	margin: 8px 10px 8px 0 ;
 	padding:4px 0;
-	/*border:solid 1px black;*/
+	cursor: pointer;
+}
+.tab-item:hover{
+
+}*/
+/* - content - */
+.right-content{
+	position: relative;
+	left:0;
+	margin-top:15px;
+	width: 900px;
+	display: flex;
 }
 .item-con{
 	width:270px;
-}
-/* - content - */
-.right-content{
-	margin-top:15px;
-	/*border:solid 1px red;*/
-	width: 900px;
-	display: flex;
+} 
+.content-list-live .item-con:nth-child(2)>p{
+	text-align: center;
+	margin:20px 0;
 }
 /* - 下面三个中的rank - */
 .rank .rank-list{
@@ -541,8 +523,9 @@ ul.labal-collapse a:hover{
 	margin-bottom: 10px;
 	width: 260px;
 }
+.rank ul>li:nth-child(-n+3) .rank-list span:first-child{background:#f25d8e;}
 .rank .rank-list span:first-child{
-	background:#f25d8e;
+	background:#b8c0cc;
 	width:18px;
 	height:18px;
 	color:white;

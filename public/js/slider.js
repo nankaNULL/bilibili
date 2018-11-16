@@ -43,7 +43,7 @@ $(function(){
     // 实现左移
     function moveLeft($active){
         if($active.index() == sliderItem - 1){
-            $active = $("[data-slider=0]");
+            $active = $("li.slider-item:eq(0)");
         }
         else{
             $active = $active.next();
@@ -56,30 +56,50 @@ $(function(){
         // 先做三个以上的轮播，获取中间位置（暂时不考虑两个及以下
         $("li.slider-item").each(function(){
             var left = 0;
-            var tIndex = $(this).index();
-            if(picIndex+1 == sliderItem && tIndex == 0){
-                left = picWidth;
-            }
-            else if(picIndex == 0 && tIndex == sliderItem-1){
-                left = -1*picWidth;
-            }
-            else{
-                left = (tIndex - picIndex)*picWidth;
-            }
-            sliderHide(left,$(this));
-            $(this).animate({
-                left:left
-            },500);
+            
+            // var left = 0;
+            // var tIndex = $(this).index();  // 每一张图片
+            // if(picIndex+1 == sliderItem && tIndex == 0){
+            //     left = picWidth;
+            //     $(this).css("z-index","1");
+            // }
+            // else if(picIndex == 0 && tIndex == sliderItem-1){
+            //     left = -1*picWidth;
+            //     //$(this).css("z-index","2");
+            // }
+            // else{
+            //     left = (tIndex - picIndex)*picWidth;
+            //     $(this).css("z-index","5");
+            // }
+            // //var zIndex = tIndex - picIndex;
+            // // sliderHide(left,$(this));
+            // $(this).animate({
+            //     left:left
+            // },500);
+            // // if(zIndex == 1 && tIndex == sliderItem-1){
+            // //     $(this).css("z-index","1");
+            // // }
+            // // else if(zIndex == -1 && tIndex == 0){
+            // //     $(this).css("z-index","2");
+            // // }
+            // // else{
+            // //     $(this).css("z-index","5");
+            // // }
         });
         // 小圆点的效果
         $(`li.dot-item:eq(${picIndex})`).addClass("active").siblings().removeClass("active");
     }
     // 隐藏
     function sliderHide(left,element){
-        if(left!=0)
-            element.css("visibility","hidden");
-        else{
-            element.css("visibility","visible");
-        }
+        // if(left == picWidth || left == -picWidth){
+        //     element.css("z-index","3");
+        // }
+        // else if(left == 0){
+        //     element.css("z-index","5");
+        // }
+        // else{
+        //     element.css("z-index","1");
+        // }
+
     }
 })

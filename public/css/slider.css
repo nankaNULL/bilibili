@@ -1,0 +1,58 @@
+body,ul,li{padding:0;margin:0;}
+ul{list-style: none}
+.slider {
+  position: relative;}
+  .slider ul.slider-con {
+    overflow: hidden;
+    position: relative;
+    width: 100%;}
+    .slider ul.slider-con li.slider-item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* visibility: hidden; */
+      z-index: 0;
+      transition: visibility 1s linear; }
+      .slider ul.slider-con li.slider-item.active {
+        z-index: 5; }
+      .slider ul.slider-con li.slider-item > a {
+        display: inline-block;
+        position: relative; }
+        .slider ul.slider-con li.slider-item > a img {
+          width: 100%; }
+        .slider ul.slider-con li.slider-item > a > div {
+          position: absolute;
+          bottom: 3px;
+          width: 100%;
+          height: 28px;
+          line-height: 28px;
+          background: linear-gradient(-180deg, transparent, rgba(0, 0, 0, 0.4));
+          color: white; }
+  .slider ul.slider-dot {
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+    overflow: hidden;
+    z-index:10;
+   }
+    .slider ul.slider-dot li.dot-item {
+      float: left;
+      margin: 5px;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; }
+      .slider ul.slider-dot li.dot-item button.btn-dot {
+        padding: 0;
+        border: 0;
+        outline: 0;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer; }
+        .slider ul.slider-dot li.dot-item.active button.btn-dot {
+                background: transparent; }

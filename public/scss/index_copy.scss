@@ -1,0 +1,112 @@
+$bl_blue:#00A1D6;
+// -- 轮播 -- 
+.content-slider{
+    overflow: hidden;
+    div.slider-left,div.slider-right{float: left;}
+    div.slider-left{
+        width:440px;
+    }
+    div.slider-right{
+        height:220px;
+        overflow: hidden;
+        position: relative;
+        width: 540px;
+        .show-card{
+            width:160px;
+            height:99px;
+            margin-bottom:8px;
+            &>div>img{border-radius: 3px;width:100%;height:100%;}
+            float: left;
+            margin:0 0 25px 20px;
+            position: relative;
+            &:hover .card-hidden{
+                background:rgba(0,0,0,.7);
+                height:100%;
+                top:0;
+            }
+            &:hover .dl{display: block}
+            &:hover #up-play{
+                // display: block;
+                opacity:0.6;
+                transition: all .3s linear;
+            }
+        }
+        .card-hidden{
+            padding:8px 5px 5px;
+            position: absolute;
+            bottom:0;
+            height: 30px;
+            overflow: hidden;
+            background: linear-gradient(transparent,rgba(0,0,0,.7));
+            p{
+                color:white;
+                line-height: 20px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            #up-play{
+                opacity: 0;
+                margin-top: 8px;
+            }
+            .dl{
+                position: absolute;
+                right: 5px;
+                bottom:0;
+                display: none;
+            }
+        }
+    }
+}
+
+// -- tab --
+.tab{
+    // display: flex;
+    overflow: hidden;
+    .tab-item{
+        float: left;
+        position: relative;
+        margin: 8px 10px 8px 0 ;
+        padding:4px 0;
+        cursor: pointer;
+        &.on{
+            color:#00A1D6;
+            border-bottom:solid 1px #00A1D6;
+            &:before{
+                position: absolute;
+                content: "";
+                /*display: none;*/
+                left: 50%;
+                margin-left: -3px;
+                bottom: 0;
+                border: 3px solid #00a1d6;
+                border-top: 0;
+                border-left-color: transparent;
+                border-right-color: transparent;
+            }
+        }
+        &:hover{
+            color:$bl_blue;
+        }
+    }
+}
+
+// -- content-list-live tab-content --
+.content-list-live{
+    .item-con{
+        &:nth-child(2)>p{
+            text-align: center;
+            margin:20px 0;
+        }
+        &.tuijian{
+            &>a{}
+            &>div{
+                margin-top: 8px;
+                a:first-child{float: left;}
+                a:last-child{float: right;}
+                img{width:130px}
+            }
+        }
+    }
+} 
