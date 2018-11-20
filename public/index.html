@@ -8,6 +8,7 @@
 		<meta name="keywords" content="">
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/slider.css">
+		<link rel="stylesheet" href="css/scrollnav.css">
 		<link rel="stylesheet" href="css/index_copy.css">
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/iconfont.css">
@@ -58,6 +59,95 @@
 					</form>
 				</div>
 			</div>
+		</div>
+		<div class="scroll-nav">
+			<ul>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">直播</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">动画</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">番剧</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">国创</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">音频</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">舞蹈</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">游戏</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">科技</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">生活</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">鬼畜</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">时尚</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">广告</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">娱乐</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">电影</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">TV剧</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">影视</span>
+					</a>
+				</li>
+				<li class="s-nav-list">
+					<a href="#">    
+						<span class="title">纪录片</span>
+					</a>
+				</li>
+			</ul>
 		</div>
 		<div class="content" id="app">
 			<div class="label-list">
@@ -453,7 +543,7 @@
 					<a href="#"><img src="images/91dd32389956c30d600e77c8cfd9d18f.jpg" alt=""></a>
 				</div>
 			</div>
-			<div class="content-list-live list-module">
+			<div class="content-list-live list-module scroll-con">
 				<div class="lazy-img"><a href="#"><img src="images/1a106fa5e9269b923ccd044bbf09f143.jpg" alt=""></a></div>
 				<div class="list-left">
 					<div class="left-title ">
@@ -734,7 +824,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-module">
+			<div class="content-list-anime list-anime list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-anime"></i>
@@ -831,7 +921,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -1058,13 +1148,13 @@
 					<button class="btn-smore">查看更多</button>
 				</div>
 			</div>
-			<div class="content-list-manga list-module">
+			<div class="content-list-manga list-module scroll-con">
 				<div class="lazy-img"><a href="#"><img src="images/46b6ffa35384b0e0590d9acdab5aa89d.jpg" alt=""></a></div>
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-manga"></i>
 						<p>番剧</p>
-						<div class="tab">
+						<div class="tab tab-manga">
 							<div class="tab-item on" @click="getManga()">最新</div>
 							<div class="tab-item" @click="getManga('mon')">一</div>
 							<div class="tab-item" @click="getManga('tues')">二</div>
@@ -1269,7 +1359,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -1380,120 +1470,29 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-manga manga-china list-module">
+			<div class="content-list-manga manga-china list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-manga-china"></i>
 						<p>国创</p>
-						<div class="tab">
-							<div class="tab-item on">最新</div>
-							<div class="tab-item">一</div>
-							<div class="tab-item">二</div>
-							<div class="tab-item">三</div>
-							<div class="tab-item">四</div>
-							<div class="tab-item">五</div>
-							<div class="tab-item">六</div>
-							<div class="tab-item">日</div>
+						<div class="tab tab-manga">
+							<div class="tab-item on" @click="getManga()">最新</div>
+							<div class="tab-item" @click="getManga('mon')">一</div>
+							<div class="tab-item" @click="getManga('tues')">二</div>
+							<div class="tab-item" @click="getManga('wed')">三</div>
+							<div class="tab-item" @click="getManga('thur')">四</div>
+							<div class="tab-item" @click="getManga('fri')">五</div>
+							<div class="tab-item" @click="getManga('sat')">六</div>
+							<div class="tab-item" @click="getManga('sun')">日</div>
 						</div>
 						<div class="manga-time">新番时间表<i class="another-icon icon-more-pink"></i></div>
 					</div>
 					<div class="scroll-card">
-						<div class="card-list">
-							<img src="images/manga1.webp" alt="">
+						<div class="card-list" v-for="manga in mangas">
+							<img :src="manga.img_url" alt="">
 							<div class="card-right">
-								<a href="#" title="昴宿七星">昴宿七星</a>
-								<p class="update"><span>更新至<a href="#">12话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga2.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="千绪的上学路">千绪的上学路</a>
-								<p class="update"><span>更新至<a href="#">12话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga3.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="美妙☆频道">美妙☆频道</a>
-								<p class="update"><span>更新至<a href="#">27话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga4.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="爱玩怪兽">爱玩怪兽</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga5.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="刀剑神域 Alicization">刀剑神域 Alicization</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga6.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="逆转裁判 第二季">逆转裁判 第二季</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga7.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="剧场版 K Seven Stories">剧场版 K Seven Stories</a>
-								<p class="update"><span>更新至<a href="#">4-1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga1.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="昴宿七星">昴宿七星</a>
-								<p class="update"><span>更新至<a href="#">12话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga2.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="千绪的上学路">千绪的上学路</a>
-								<p class="update"><span>更新至<a href="#">12话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga3.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="美妙☆频道">美妙☆频道</a>
-								<p class="update"><span>更新至<a href="#">27话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga4.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="爱玩怪兽">爱玩怪兽</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga5.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="刀剑神域 Alicization">刀剑神域 Alicization</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga6.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="逆转裁判 第二季">逆转裁判 第二季</a>
-								<p class="update"><span>更新至<a href="#">1话</a></span></p>
-							</div>
-						</div>
-						<div class="card-list">
-							<img src="images/manga7.webp" alt="">
-							<div class="card-right">
-								<a href="#" title="剧场版 K Seven Stories">剧场版 K Seven Stories</a>
-								<p class="update"><span>更新至<a href="#">4-1话</a></span></p>
+								<a href="#" :title="manga.title">{{manga.title}}</a>
+								<p class="update"><span>更新至<a href="#">{{manga.episode}}话</a></span></p>
 							</div>
 						</div>
 					</div>
@@ -1647,7 +1646,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -1820,7 +1819,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-music list-module">
+			<div class="content-list-anime list-music list-module scroll-con">
 				<!-- <div class="lazy-img"><a href="#"><img src="" alt=""></a></div> -->
 				<div class="list-left">
 					<div class="left-title">
@@ -1918,7 +1917,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -2091,7 +2090,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-dance list-module">
+			<div class="content-list-anime list-dance list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-dance"></i>
@@ -2188,7 +2187,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -2361,7 +2360,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-game list-module">
+			<div class="content-list-anime list-game list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-game"></i>
@@ -2458,7 +2457,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -2631,7 +2630,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-science list-module">
+			<div class="content-list-anime list-science list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-science"></i>
@@ -2728,7 +2727,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -2901,7 +2900,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-life list-module">
+			<div class="content-list-anime list-life list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-life"></i>
@@ -2998,7 +2997,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -3171,7 +3170,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-guichu list-module">
+			<div class="content-list-anime list-guichu list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-guichu"></i>
@@ -3268,7 +3267,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -3441,7 +3440,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-fashion list-module">
+			<div class="content-list-anime list-fashion list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-fashion"></i>
@@ -3538,7 +3537,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -3711,7 +3710,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-ad list-module">
+			<div class="content-list-anime list-ad list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-ad"></i>
@@ -3808,7 +3807,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -3981,7 +3980,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-yule list-module">
+			<div class="content-list-anime list-yule list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-yule"></i>
@@ -4078,7 +4077,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -4251,7 +4250,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-medium list-module">
+			<div class="content-list-anime list-medium list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-medium"></i>
@@ -4348,7 +4347,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -4521,7 +4520,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-tv list-module">
+			<div class="content-list-anime list-tv list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-tv"></i>
@@ -4618,7 +4617,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -4791,7 +4790,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-yingshi list-module">
+			<div class="content-list-anime list-yingshi list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-yingshi"></i>
@@ -4888,7 +4887,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -5061,7 +5060,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="content-list-anime list-decoration list-module">
+			<div class="content-list-anime list-decoration list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<i class="icon-card icon-decoration"></i>
@@ -5158,7 +5157,7 @@
 									</div>
 								</div>
 							</div>
-							<p title="【工作细胞】各细胞寿命长短比较"">【工作细胞】各细胞寿命长短比较</p>
+							<p title="【工作细胞】各细胞寿命长短比较">【工作细胞】各细胞寿命长短比较</p>
 							<div class="live-hidden">
 								<span>
 									<i class="another-icon icon-video"></i>
@@ -5331,7 +5330,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="content-list-anime list-decoration list-module">
+			<!-- <div class="content-list-anime list-decoration list-module scroll-con">
 				<div class="list-left">
 					<div class="left-title">
 						<img src="" alt="">
@@ -5466,6 +5465,7 @@
 		<script src="js/jquery-3.2.1.js"></script>
 		<script src="js/header.js"></script>
 		<script src="js/slider.js"></script>
+		<script src="js/scrollnav.js"></script>
 		<script src="js/index.js"></script>
 		<script src="js/vue.js"></script>
 		<script>
@@ -5494,7 +5494,6 @@
 					getManga(time){
 						this.mangas = [];
 						for(let manga of this.mangalists){
-							console.log(time);
 							if(!time) this.mangas.push(manga);
 							if(manga.time == time){
 								this.mangas.push(manga);
@@ -5502,7 +5501,10 @@
 						}
 					}
 				},
+				created(){
+					this.getManga();
 				
+				}
 			})
 		</script>
 	</body>
