@@ -42,25 +42,25 @@ a {
       display: inline-block;
       height: 41px;
       line-height: 41px; }
-  .nav-content ul:nth-child(2) li {
+  .nav-content ul:nth-child(2) li, .nav-content ul:last-child li {
     position: relative; }
-    .nav-content ul:nth-child(2) li.p-img {
+    .nav-content ul:nth-child(2) li.p-img, .nav-content ul:last-child li.p-img {
       border-radius: 50%;
       padding: 0;
       margin: 0 9px; }
-      .nav-content ul:nth-child(2) li.p-img > a img {
+      .nav-content ul:nth-child(2) li.p-img > a img, .nav-content ul:last-child li.p-img > a img {
         border-radius: 50%;
         width: 41px;
         height: 41px;
         vertical-align: top; }
-      .nav-content ul:nth-child(2) li.p-img div.p_login {
+      .nav-content ul:nth-child(2) li.p-img div.p_login, .nav-content ul:last-child li.p-img div.p_login {
         width: 320px;
         left: 50%;
         margin-left: -160px;
         padding: 12px;
         background: #fff;
         border: 1px solid #e5e9ef; }
-        .nav-content ul:nth-child(2) li.p-img div.p_login div.log-slider-img {
+        .nav-content ul:nth-child(2) li.p-img div.p_login div.log-slider-img, .nav-content ul:last-child li.p-img div.p_login div.log-slider-img {
           position: relative;
           overflow: hidden;
           width: 100%;
@@ -68,13 +68,13 @@ a {
           border: solid 1px #00A1D6;
           margin: 12px 0;
           background: url(../images/base/danmu.png) no-repeat; }
-          .nav-content ul:nth-child(2) li.p-img div.p_login div.log-slider-img > img {
+          .nav-content ul:nth-child(2) li.p-img div.p_login div.log-slider-img > img, .nav-content ul:last-child li.p-img div.p_login div.log-slider-img > img {
             position: absolute;
             left: 0;
             top: 0; }
-          .nav-content ul:nth-child(2) li.p-img div.p_login div.log-slider-img > img:last-child {
+          .nav-content ul:nth-child(2) li.p-img div.p_login div.log-slider-img > img:last-child, .nav-content ul:last-child li.p-img div.p_login div.log-slider-img > img:last-child {
             left: 320px; }
-        .nav-content ul:nth-child(2) li.p-img div.p_login > a {
+        .nav-content ul:nth-child(2) li.p-img div.p_login > a, .nav-content ul:last-child li.p-img div.p_login > a {
           color: white;
           width: 100%;
           height: 43px;
@@ -83,16 +83,16 @@ a {
           background: #00A1D6;
           text-align: center;
           font-size: 14px; }
-          .nav-content ul:nth-child(2) li.p-img div.p_login > a:hover {
+          .nav-content ul:nth-child(2) li.p-img div.p_login > a:hover, .nav-content ul:last-child li.p-img div.p_login > a:hover {
             background: #00b5e5; }
-        .nav-content ul:nth-child(2) li.p-img div.p_login > p:last-child {
+        .nav-content ul:nth-child(2) li.p-img div.p_login > p:last-child, .nav-content ul:last-child li.p-img div.p_login > p:last-child {
           text-align: center; }
-          .nav-content ul:nth-child(2) li.p-img div.p_login > p:last-child a {
+          .nav-content ul:nth-child(2) li.p-img div.p_login > p:last-child a, .nav-content ul:last-child li.p-img div.p_login > p:last-child a {
             height: 0;
             color: #00A1D6; }
-            .nav-content ul:nth-child(2) li.p-img div.p_login > p:last-child a:hover {
+            .nav-content ul:nth-child(2) li.p-img div.p_login > p:last-child a:hover, .nav-content ul:last-child li.p-img div.p_login > p:last-child a:hover {
               color: #00b5e5; }
-    .nav-content ul:nth-child(2) li:nth-child(2) > div.history {
+    .nav-content ul:nth-child(2) li:nth-child(2) > div.history, .nav-content ul:last-child li:nth-child(2) > div.history {
       position: absolute;
       width: 400px;
       left: auto;
@@ -104,31 +104,31 @@ a {
       visibility: hidden;
       opacity: 0;
       top: 65px; }
-      .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child {
+      .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child, .nav-content ul:last-child li:nth-child(2) > div.history > div:first-child {
         margin: 10px auto; }
-        .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child > p, .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child > a {
+        .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child > p, .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child > a, .nav-content ul:last-child li:nth-child(2) > div.history > div:first-child > p, .nav-content ul:last-child li:nth-child(2) > div.history > div:first-child > a {
           margin: 10px 0; }
-        .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child > a {
+        .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child > a, .nav-content ul:last-child li:nth-child(2) > div.history > div:first-child > a {
           display: inline;
           color: #fff;
           background: #00A1D6;
           padding: 5px 11px;
           border-radius: 4px; }
-          .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child > a:hover {
+          .nav-content ul:nth-child(2) li:nth-child(2) > div.history > div:first-child > a:hover, .nav-content ul:last-child li:nth-child(2) > div.history > div:first-child > a:hover {
             background: #00b5e5; }
-      .nav-content ul:nth-child(2) li:nth-child(2) > div.history > ul.history-list li {
+      .nav-content ul:nth-child(2) li:nth-child(2) > div.history > ul.history-list li, .nav-content ul:last-child li:nth-child(2) > div.history > ul.history-list li {
         text-align: center;
         width: 100%;
         height: 28px;
         line-height: 28px; }
-      .nav-content ul:nth-child(2) li:nth-child(2) > div.history > a {
+      .nav-content ul:nth-child(2) li:nth-child(2) > div.history > a, .nav-content ul:last-child li:nth-child(2) > div.history > a {
         width: 100%;
         height: 28px;
         line-height: 28px;
         background-color: #e5e9ef;
         border: 1px solid #e0e6ed;
         border-radius: 4px; }
-    .nav-content ul:nth-child(2) li.tg {
+    .nav-content ul:nth-child(2) li.tg, .nav-content ul:last-child li.tg {
       height: 47px;
       margin-left: 9px;
       padding: 0 15px;
@@ -136,14 +136,14 @@ a {
       border-bottom-left-radius: 5px;
       background: #f25d8e;
       color: white; }
-      .nav-content ul:nth-child(2) li.tg > a {
+      .nav-content ul:nth-child(2) li.tg > a, .nav-content ul:last-child li.tg > a {
         height: 0; }
-      .nav-content ul:nth-child(2) li.tg > ul.tg-list {
+      .nav-content ul:nth-child(2) li.tg > ul.tg-list, .nav-content ul:last-child li.tg > ul.tg-list {
         width: 360px;
         height: 64px;
         right: 0;
         background: #fff; }
-        .nav-content ul:nth-child(2) li.tg > ul.tg-list li {
+        .nav-content ul:nth-child(2) li.tg > ul.tg-list li, .nav-content ul:last-child li.tg > ul.tg-list li {
           position: relative;
           cursor: pointer;
           text-align: center;
@@ -152,27 +152,27 @@ a {
           float: left;
           position: relative;
           transition: .2s; }
-          .nav-content ul:nth-child(2) li.tg > ul.tg-list li span {
+          .nav-content ul:nth-child(2) li.tg > ul.tg-list li span, .nav-content ul:last-child li.tg > ul.tg-list li span {
             color: #f25d8e; }
-          .nav-content ul:nth-child(2) li.tg > ul.tg-list li i {
+          .nav-content ul:nth-child(2) li.tg > ul.tg-list li i, .nav-content ul:last-child li.tg > ul.tg-list li i {
             position: relative;
             display: block;
             transition: top .2s ease;
             width: 20px;
             height: 20px;
             margin: 15px auto 2px; }
-          .nav-content ul:nth-child(2) li.tg > ul.tg-list li:hover i {
+          .nav-content ul:nth-child(2) li.tg > ul.tg-list li:hover i, .nav-content ul:last-child li.tg > ul.tg-list li:hover i {
             top: -2px; }
-          .nav-content ul:nth-child(2) li.tg > ul.tg-list li:hover {
+          .nav-content ul:nth-child(2) li.tg > ul.tg-list li:hover, .nav-content ul:last-child li.tg > ul.tg-list li:hover {
             background: #e5e9ef; }
-    .nav-content ul:nth-child(2) li.p-img div.p_login, .nav-content ul:nth-child(2) li:nth-child(2) > div.history, .nav-content ul:nth-child(2) li.tg ul.tg-list {
+    .nav-content ul:nth-child(2) li.p-img div.p_login, .nav-content ul:nth-child(2) li:nth-child(2) > div.history, .nav-content ul:nth-child(2) li.tg ul.tg-list, .nav-content ul:last-child li.p-img div.p_login, .nav-content ul:last-child li:nth-child(2) > div.history, .nav-content ul:last-child li.tg ul.tg-list {
       position: absolute;
       z-index: 20;
       opacity: 0;
       visibility: hidden;
       top: 55px;
       transition: visibility 0.4s ease,top 0.3s ease,opacity 0.3s linear; }
-    .nav-content ul:nth-child(2) li.p-img:hover div.p_login, .nav-content ul:nth-child(2) li:nth-child(2):hover div.history, .nav-content ul:nth-child(2) li.tg:hover ul.tg-list {
+    .nav-content ul:nth-child(2) li.p-img:hover div.p_login, .nav-content ul:nth-child(2) li:nth-child(2):hover div.history, .nav-content ul:nth-child(2) li.tg:hover ul.tg-list, .nav-content ul:last-child li.p-img:hover div.p_login, .nav-content ul:last-child li:nth-child(2):hover div.history, .nav-content ul:last-child li.tg:hover ul.tg-list {
       visibility: visible;
       opacity: 1;
       top: 41px; }

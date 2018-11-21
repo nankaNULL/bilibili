@@ -59,7 +59,7 @@ a{color:$txt-black}
         }
         
     }
-    ul:nth-child(2){
+    ul:nth-child(2),ul:last-child{
         li{
             position: relative;
             &.p-img{

@@ -12,6 +12,7 @@ $(function(){
                 data:{uname,upwd},
                 dataType:"json",
             });
+            console.log(res.ok);
             if(res.ok == 1){
                 if(location.search.indexOf("back=")!=-1){
                     location.href = location.search.slice(6);
@@ -21,7 +22,8 @@ $(function(){
                 }
             }
             else{
-                alert("wa");
+                $(".icon-error").show();
+                alert("用户名或密码错误");
             }
         })();
     })

@@ -34,6 +34,16 @@ input,select{
 	color:#757575;
 	width:100%;
 }
+.rg-list{position: relative;}
+.rg-list span.g-warn{
+	color: #f45d90;
+    position: absolute;
+	left: 50%;
+	margin-left:220px;
+	top: 12px;
+	width:200px;
+	text-align: left;
+}
 .rg-list div{
 	height:38px;
 	line-height:38px;
@@ -75,7 +85,21 @@ input[type=checkbox]{
 	height:16px;
 	width:16px;
 	background:white;
+	
 }
 input[type=submit]{
 	background:white;
+	cursor: not-allowed;
+	outline: 0;
+}
+input[type=submit].active{
+	background:#00A7DE;
+	color:white;
+	cursor: pointer;
+}
+.rg-list div.align-right>a,.rg-list.rg-check a,.rg-list.rg-select div.align-right>a{
+	color:#00A7DE;
+}
+.rg-list div.align-right>a:hover,.rg-list.rg-check a:hover,.rg-list.rg-select div.align-right>a:hover{
+	color:#f45d90;
 }

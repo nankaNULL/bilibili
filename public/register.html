@@ -7,50 +7,132 @@
 		<title>REGISTER</title>
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/register.css">
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/register.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/axios.min.js"></script>
+		<script src="js/qs.min.js"></script>
+		<style>
+			header .header{background:white !important; }
+		</style>
 	</head>
 	<body>
-		<iframe src="header.html" frameborder="0" width="100%" height="50px" scrolling="no" style="position: absolute;top:0"></iframe>
-		<div class="m-content" style="margin-top:38px">
+		<header></header>
+		<div class="m-content" id="app">
 			<div class="top">
 				<img src="images/rl_top.35edfde.png" alt="">
 			</div>
 			<div class="m-register">
 				<div class="rg-title"><span>注册</span></div>
 				<div class="rg-content">
-					<form action="">
-						<div class="rg-list">
-							<input type="text" placeholder="昵称">
-							<span id="g-name"></span>
-							<div>安全系数</div>
-						</div>
-						<div class="rg-list">
-							<input type="password" placeholder="密码（6-16个字符组成，区分大小写）">
-							<span id="g-name"></span>
-							<div></div>
-						</div>
-						<div class="rg-list rg-select">
-							<select name="" id="" >
-								<option value="please">请选择国家</option>
-								<option value="china">中国</option>
-							</select>
-							<input type="text" placeholder="填写常用手机号">
-							<div class="align-right"><a href="#">用邮箱注册&gt;</a></div>
-						</div>
-						<div class="rg-list f-position">
-							<input type="text" placeholder="请输入短信验证码">
-							<button class="btn-get">点击获取</button>
-							<span id="g-name"></span>
-						</div>
-						<div class="rg-list rg-check">
-							<input type="checkbox">我已同意<a href="#">《哔哩哔哩弹幕网用户使用协议》</a>和<a href="#">《哔哩哔哩弹幕网账号中心规范》</a>
-						</div>
-						<div class="rg-list">
-							<input type="submit" value="注册">
-							<div class="align-right"><a href="login.html">已有账号，直接登录&gt;</a></div>
-						</div>
-					</form>
+					<div class="rg-list">
+						<input type="text" placeholder="昵称" id="uname" v-model="uname">
+						<span class="g-warn">{{msg1}}</span>
+						<div style="visibility: hidden;">安全系数</div>
+					</div>
+					<div class="rg-list">
+						<input type="password" placeholder="密码（6-16个字符组成，区分大小写）" id="upwd" v-model="upwd">
+						<span class="g-warn">{{msg2}}</span>
+						<div></div>
+					</div>
+					<div class="rg-list rg-select">
+						<select name="" id="" >
+							<option value="please">请选择国家</option>
+							<option value="china">中国</option>
+						</select>
+						<input type="text" placeholder="填写常用手机号" v-model="phone">
+						<div class="align-right"><a href="#">用邮箱注册&gt;</a></div>
+					</div>
+					<div class="rg-list f-position">
+						<input type="text" placeholder="请输入短信验证码">
+						<button class="btn-get">点击获取</button>
+						<span id="g-name"></span>
+					</div>
+					<div class="rg-list rg-check">
+						<input type="checkbox" id="ck"> 
+						<label for="ck">
+							我已同意<a href="#">《哔哩哔哩弹幕网用户使用协议》</a>和<a href="#">《哔哩哔哩弹幕网账号中心规范》</a>
+						</label>
+					</div>
+					<div class="rg-list">
+						<input type="submit" value="注册" @click="register()">
+						<div class="align-right"><a href="login.html">已有账号，直接登录&gt;</a></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				uname:"",
+				upwd:"",
+				phone:"",
+				msg1:"",
+				msg2:"",
+				canRegister:[false,false]
+			},
+			methods:{
+				register(){
+					if($("input[type=submit]").hasClass("active")&&this.canRegister[0]&&this.canRegister[1]){
+						axios.post("http://localhost:3000/users/register",Qs.stringify({uname:this.uname,upwd:this.upwd,phone:this.phone})).then((res)=>{
+							console.log(res.data);
+							location.href="login.html"
+						})
+					}
+				}
+			},
+			watch:{
+				uname:function(){
+					this.canRegister[0] = false;
+					if(this.uname.length==0){
+						this.msg1="请告诉我你的昵称吧";
+					}
+					else if(this.uname.length<2){
+						this.msg1="你的用户名过短，不允许注册！";
+					}
+					else if(this.uname.length>17){
+						this.msg1="用户名过长！";
+					}
+					else{
+						$.ajax({
+							url:"http://localhost:3000/users/isregister",
+							type:"get",
+							data:{uname:this.uname},
+							dataType:"json",
+							success:(res)=>{
+								if(res.ok==1){
+									this.msg1="";
+									this.canRegister[0] = true;
+								}
+								else{
+									this.msg1= "该昵称已被他人使用";
+								}
+							}
+						})
+					}
+				},
+				upwd:function(){
+					var reg = /^[/a-zA-Z\d_]{6,16}$/;
+					this.canRegister[1] = false;
+					if(this.upwd.length<6){
+						this.msg2 = "密码不能小于6个字符";
+					}
+					else if(this.upwd.length>16){
+						this.msg2 = "密码不能大于16个字符";
+					}
+					else{
+						if(!reg.test(this.upwd)){
+							this.msg2="存在非法字符";
+						}else{
+							this.msg2 = "";
+							this.canRegister[1] = true;
+						}
+					}
+				}
+			},
+		})
+	</script>
 </html>

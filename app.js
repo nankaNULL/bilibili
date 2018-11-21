@@ -16,5 +16,6 @@ app.use(session({
 
 //托管静态资源
 app.use(express.static("./public"));
+app.use('/index',require("./routes/index"));
+app.use('/users',require("./routes/users"));
 app.use('/personal',require("./routes/personal"));
-app.use('/users',require("./routes/users"))

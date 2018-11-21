@@ -59,7 +59,7 @@ ul{list-style: none;}
 }
 .lg-r ul{width:410px;}
 input[type=text],input[type=password]{
-	border:solid 1px #F66495;
+	border:1px solid #ddd;
 	height:40px;
 	width:410px;
 	padding:0 10px;
@@ -69,6 +69,7 @@ input[type=text],input[type=password]{
 .t-warn{
 	color:#F66495;
 	padding:8px 0 ;
+	visibility: hidden;
 }
 input[type=checkbox]{
 	margin:10px 3px 10px 0;
@@ -94,11 +95,23 @@ a.lg-btn{
 	cursor: pointer;
 	border-radius: 2px;
 }
-a.btn-login{
+.lg-list a.btn-login{
 	background: #00A7DE;
 	color:white;
 	border:solid 1px #0381AA;
 	margin-right:34px;
+}
+.lg-list{position: relative;}
+.lg-list span.icon-error{
+	position: absolute;
+	top: 8px;
+    right: -25px;
+	/* display: inline-block; */
+	display: none;
+	background:url(../images/base/error.png) no-repeat;
+	background-position: -37px -38px;
+	width: 20px;
+    height: 20px;
 }
 .lg-list:last-child{ margin-top:8px; }
 .lg-list:last-child span{
