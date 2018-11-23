@@ -60,6 +60,11 @@ router.get("/islogin",(req,res)=>{
     }
     
 });
+router.get("/signout",(req,res)=>{
+    req.session["uid"] = undefined;
+    console.log(req.session["uid"]);
+    res.end();
+})
 // 昵称是否被注册
 router.get("/isregister",(req,res)=>{
     var uname = req.query.uname;

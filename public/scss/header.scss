@@ -22,6 +22,30 @@ a{color:$txt-black}
     &.tg-center{
         background-position: -471px -1751px;
     }
+    &.fun-person{
+        background-position: -472px -407px;
+    }
+    &.fun-tg{
+        background-position: -536px -1046px
+    }
+    &.fun-coin{
+        background-position: -472px -472px;
+    }
+    &.fun-live{
+        background-position: -473px -855px;
+    }
+    &.msg-coin{
+        background-position: -343px -471px;
+    }
+    &.msg-coinb{
+        background-position: -407px -471px;
+    }
+    &.msg-mail{
+        background-position: -279px -534px;
+    }
+    &.msg-phone{
+        background-position: -343px -599px;
+    }
 }
 
 // --- header部分 ---
@@ -37,7 +61,7 @@ a{color:$txt-black}
 	display: flex;
     justify-content: space-between;
     
-    ul{height:41px;}
+    &>ul{height:41px;}
     li{
         float:left;
         padding:0 9px;
@@ -59,6 +83,7 @@ a{color:$txt-black}
         }
         
     }
+    //
     ul:nth-child(2),ul:last-child{
         li{
             position: relative;
@@ -69,9 +94,9 @@ a{color:$txt-black}
                 &>a{
                     img{
                         border-radius: 50%;
-                        width:41px;
-                        height:41px;
-                        vertical-align: top;
+                        width:38px;
+                        height:38px;
+                        vertical-align: middle;
                     }
                 }
                 div.p_login{
@@ -169,9 +194,9 @@ a{color:$txt-black}
                 border-bottom-left-radius: 5px;
                 background:$bl-pink;
                 color:white;
-                &>a{
-                    height:0;
-                }
+                // &>a{
+                //     height:0;
+                // }
                 &>ul.tg-list{
                     width: 360px;
                     height: 64px;
@@ -216,6 +241,98 @@ a{color:$txt-black}
             }
         }
     }
-    .isLogin{display: none}
+    &>ul.isLogin{
+        display: none;
+        li.p-img{
+            position: relative;
+            width: 41px;
+            height: 41px;
+            &>a{
+                transition: all 0.4s ease;
+                &>img{transition: all 0.4s ease;}
+            }
+            &.on{
+                &>a{
+                    position: absolute;
+                    z-index: 35;
+                    top:15px;
+                    left:0;
+                    margin-left:-11px;
+                    &>img{
+                         width:64px;
+                         height:64px;
+                         border:solid 2px #fff;
+                    }
+                }
+            }
+            div.p_login{
+                position: absolute;
+                left: 50%;
+                margin-left: -130px;
+                // top: 42px;
+                width: 260px;
+                background: #fff;
+                padding: 50px 0 0;
+                border-radius: 0 0 4px 4px;
+                div.msg{
+                    text-align: center;
+                    &>p.bl_user{font-weight: bold}
+                    &>div.msg-list{
+                        overflow: hidden;
+                        padding:20px;
+                        &>div{cursor: pointer;}
+                        i.bl-icon{
+                            display: inline-block;
+                            width: 18px;
+                            height: 18px;
+                            vertical-align: top;
+                            margin-top: -2px;
+                        }
+                        div.msg-item{
+                            float: left;
+                            margin-right: 20px;
+                        }
+                        div.msg-item-right{
+                            float: right;
+                            margin-left:10px;
+                        }
+                    }
+                }
+                div.fun{
+                    border-top: 1px solid #e5e9ef;
+                    padding: 10px 0px 0px 20px;
+                    &>ul{
+                        display: block;
+                        overflow: hidden;
+                        li{
+                            float: left;
+                            width: 100px;
+                            margin-right: 20px; 
+                            padding:5px 0;
+                            i.bl-icon{
+                                display: inline-block;
+                                width: 16px;
+                                height: 16px;
+                                margin-right: 10px;
+                                vertical-align: top;
+                            }
+                            &>span{
+                                cursor: pointer;
+                                &:hover{color:$bl-blue}
+                            }
+                        }
+                        &>li:nth-child(2n){margin-right:0;}
+                    }
+                }
+                div.signout{
+                    overflow: hidden;
+                    a{
+                        float: right;
+                        margin-right:20px;
+                    }
+                }
+            }
+        }
+    }
     
 }

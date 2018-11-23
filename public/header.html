@@ -76,13 +76,48 @@
 						<img src="images/no-data.940dc0f.png">
 					</a>
 					<div class="p_login">
-						<p>登陆后你可以：</p>
-						<div class="log-slider-img">
-							<img src="./images/danmu.png">
-							<img src="./images/danmu.png">
+						<div class="msg">
+							<p class="bl_user">木有鱼丸嘤???</p>
+							<div class="msg-list">
+								<div class="msg-item">
+									<i class="bl-icon msg-coin"></i>
+									<span>322</span>
+								</div>
+								<div class="msg-item">
+									<i class="bl-icon msg-coinb"></i>
+									<span>0</span>
+								</div>
+								<div class="msg-item-right">
+									<i class="bl-icon msg-phone"></i>
+								</div>
+								<div class="msg-item-right">
+									<i class="bl-icon msg-mail"></i>
+								</div>
+							</div>
 						</div>
-						<a href="login.html">登录</a>
-						<p>首次使用? <a href="register.html">点我去注册</a></p>
+						<div class="fun">
+							<ul>
+								<li>
+									<i class="bl-icon fun-person"></i>
+									<span>个人中心</span>
+								</li>
+								<li>
+									<i class="bl-icon fun-tg"></i>
+									<span>投稿管理</span>
+								</li>
+								<li>
+									<i class="bl-icon fun-coin"></i>
+									<span>B币钱包</span>
+								</li>
+								<li>
+									<i class="bl-icon fun-live"></i>
+									<span>直播中心</span>
+								</li>
+							</ul>
+						</div>
+						<div class="signout">
+							<a href="javascript:;" class="btn-signout">退出</a>
+						</div>
 					</div>
 				</li>
 				<li><a href="#">大会员</a></li>
@@ -91,7 +126,31 @@
 				<li><a href="#">稍后再看</a></li>
 				<li><a href="#">收藏夹</a></li>
 				<li><a href="#">历史</a></li>
-				<li class="tg"><a href="#" class="bg-pink">投 稿</a></li>
+				<li class="tg">
+					<a href="#" class="bg-pink">投 稿</a>
+					<ul class="tg-list">
+						<li>
+							<i class="bl-icon tg-zhuanlan"></i>
+							<span>专栏投稿</span>
+						</li>
+						<li>
+							<i class="bl-icon tg-audio"></i>
+							<span>音频投稿</span>
+						</li>
+						<li>
+							<i class="bl-icon tg-video"></i>
+							<span>视频投稿</span>
+						</li>
+						<li>
+							<i class="bl-icon tg-manage"></i>
+							<span>投稿管理</span>
+						</li>
+						<li>
+							<i class="bl-icon tg-center"></i>
+							<span>创作中心</span>
+						</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -106,5 +165,20 @@
 			});
 		},10);
 		
+		// 头像
+		$("ul.isLogin .p-img").hover(function(){
+			$(this).toggleClass("on");
+		})
+
+		// 退出
+		$(".btn-signout").click(function(){
+			$.ajax({
+				url:"http://localhost:3000/users/signout",
+				type:"get",
+				success:function(){
+					location.reload();
+				}
+			})
+		})
 	})
 </script>

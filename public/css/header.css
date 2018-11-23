@@ -13,6 +13,22 @@ a {
     background-position: -471px -982px; }
   .bl-icon.tg-center {
     background-position: -471px -1751px; }
+  .bl-icon.fun-person {
+    background-position: -472px -407px; }
+  .bl-icon.fun-tg {
+    background-position: -536px -1046px; }
+  .bl-icon.fun-coin {
+    background-position: -472px -472px; }
+  .bl-icon.fun-live {
+    background-position: -473px -855px; }
+  .bl-icon.msg-coin {
+    background-position: -343px -471px; }
+  .bl-icon.msg-coinb {
+    background-position: -407px -471px; }
+  .bl-icon.msg-mail {
+    background-position: -279px -534px; }
+  .bl-icon.msg-phone {
+    background-position: -343px -599px; }
 
 .nav {
   background: white;
@@ -24,7 +40,7 @@ a {
   margin: 0 auto;
   display: flex;
   justify-content: space-between; }
-  .nav-content ul {
+  .nav-content > ul {
     height: 41px; }
   .nav-content li {
     float: left;
@@ -50,9 +66,9 @@ a {
       margin: 0 9px; }
       .nav-content ul:nth-child(2) li.p-img > a img, .nav-content ul:last-child li.p-img > a img {
         border-radius: 50%;
-        width: 41px;
-        height: 41px;
-        vertical-align: top; }
+        width: 38px;
+        height: 38px;
+        vertical-align: middle; }
       .nav-content ul:nth-child(2) li.p-img div.p_login, .nav-content ul:last-child li.p-img div.p_login {
         width: 320px;
         left: 50%;
@@ -136,8 +152,6 @@ a {
       border-bottom-left-radius: 5px;
       background: #f25d8e;
       color: white; }
-      .nav-content ul:nth-child(2) li.tg > a, .nav-content ul:last-child li.tg > a {
-        height: 0; }
       .nav-content ul:nth-child(2) li.tg > ul.tg-list, .nav-content ul:last-child li.tg > ul.tg-list {
         width: 360px;
         height: 64px;
@@ -176,5 +190,80 @@ a {
       visibility: visible;
       opacity: 1;
       top: 41px; }
-  .nav-content .isLogin {
+  .nav-content > ul.isLogin {
     display: none; }
+    .nav-content > ul.isLogin li.p-img {
+      position: relative;
+      width: 41px;
+      height: 41px; }
+      .nav-content > ul.isLogin li.p-img > a {
+        transition: all 0.4s ease; }
+        .nav-content > ul.isLogin li.p-img > a > img {
+          transition: all 0.4s ease; }
+      .nav-content > ul.isLogin li.p-img.on > a {
+        position: absolute;
+        z-index: 35;
+        top: 15px;
+        left: 0;
+        margin-left: -11px; }
+        .nav-content > ul.isLogin li.p-img.on > a > img {
+          width: 64px;
+          height: 64px;
+          border: solid 2px #fff; }
+      .nav-content > ul.isLogin li.p-img div.p_login {
+        position: absolute;
+        left: 50%;
+        margin-left: -130px;
+        width: 260px;
+        background: #fff;
+        padding: 50px 0 0;
+        border-radius: 0 0 4px 4px; }
+        .nav-content > ul.isLogin li.p-img div.p_login div.msg {
+          text-align: center; }
+          .nav-content > ul.isLogin li.p-img div.p_login div.msg > p.bl_user {
+            font-weight: bold; }
+          .nav-content > ul.isLogin li.p-img div.p_login div.msg > div.msg-list {
+            overflow: hidden;
+            padding: 20px; }
+            .nav-content > ul.isLogin li.p-img div.p_login div.msg > div.msg-list > div {
+              cursor: pointer; }
+            .nav-content > ul.isLogin li.p-img div.p_login div.msg > div.msg-list i.bl-icon {
+              display: inline-block;
+              width: 18px;
+              height: 18px;
+              vertical-align: top;
+              margin-top: -2px; }
+            .nav-content > ul.isLogin li.p-img div.p_login div.msg > div.msg-list div.msg-item {
+              float: left;
+              margin-right: 20px; }
+            .nav-content > ul.isLogin li.p-img div.p_login div.msg > div.msg-list div.msg-item-right {
+              float: right;
+              margin-left: 10px; }
+        .nav-content > ul.isLogin li.p-img div.p_login div.fun {
+          border-top: 1px solid #e5e9ef;
+          padding: 10px 0px 0px 20px; }
+          .nav-content > ul.isLogin li.p-img div.p_login div.fun > ul {
+            display: block;
+            overflow: hidden; }
+            .nav-content > ul.isLogin li.p-img div.p_login div.fun > ul li {
+              float: left;
+              width: 100px;
+              margin-right: 20px;
+              padding: 5px 0; }
+              .nav-content > ul.isLogin li.p-img div.p_login div.fun > ul li i.bl-icon {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 10px;
+                vertical-align: top; }
+              .nav-content > ul.isLogin li.p-img div.p_login div.fun > ul li > span {
+                cursor: pointer; }
+                .nav-content > ul.isLogin li.p-img div.p_login div.fun > ul li > span:hover {
+                  color: #00A1D6; }
+            .nav-content > ul.isLogin li.p-img div.p_login div.fun > ul > li:nth-child(2n) {
+              margin-right: 0; }
+        .nav-content > ul.isLogin li.p-img div.p_login div.signout {
+          overflow: hidden; }
+          .nav-content > ul.isLogin li.p-img div.p_login div.signout a {
+            float: right;
+            margin-right: 20px; }

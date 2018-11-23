@@ -22,7 +22,7 @@ div,ul,li,a,p{
 }
 .header a{display: inline-block;}
 /* -- header部分的顶部nav -- */
-.nav-content li:hover{
+.nav-content li:not(.p-img):hover{
 	background:rgba(255,255,255,.4);
 }
 

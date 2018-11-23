@@ -19,7 +19,8 @@ $(function(){
                     if(res.ok == 1){
                         $(".isLogin").show().prev().hide();
                         $(".isLogin>.p-img>a>img").prop("src",res.uimg);
-                        console.log(res.uimg);
+                        $(".isLogin .p_login .bl_user").html(res.uname);
+                        console.log(res.uname);
                     }
                     else{
                         $(".isLogin").hide().next().show();
