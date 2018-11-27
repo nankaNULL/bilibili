@@ -30,6 +30,8 @@ INSERT INTO bilibili_user VALUES(null,'巫格格w', '123456', '13012341221', '',
 INSERT INTO bilibili_user VALUES(null,'尕丶天堂', '123456', '13012341222', '', '');
 INSERT INTO bilibili_user VALUES(null,'动漫低手咸鱼', '123456', '13012341223', '', '');
 INSERT INTO bilibili_user VALUES(null,'抖抖村', '123456', '13012341224', '', '');
+INSERT INTO bilibili_user VALUES(null,'百万剪辑狮', '123456', '13012341225', '', '');
+INSERT INTO bilibili_user VALUES(null,'木暮修次', '123456', '13012341226', '', '');
 
 
 CREATE TABLE bilibili_video(
@@ -74,3 +76,42 @@ INSERT INTO bilibili_video VALUES(null,'【乱入向】小埋乱入妹抖龙op�
 INSERT INTO bilibili_video VALUES(null,'【工作细胞】各细胞寿命长短比较','http://localhost:3000/images/anime4.webp','00:03:30.000000',1,'2018-09-23',200000, 1533,4);
 INSERT INTO bilibili_video VALUES(null,'何为营销号？用爱发电对UP主而言意味着什么？网络原创生态的窘迫现状及其成因【动话说#02】','http://localhost:3000/images/anime5.webp','00:34:29.000000',1,'2018-09-23',947000, 39000,4);
 INSERT INTO bilibili_video VALUES(null,'【泛式/单集MAD】海贼王：顶上战争篇——这个时代的名字叫白胡子！','http://localhost:3000/images/anime6.webp','00:04:15.000000',1,'2018-09-23',5561, 103,4);
+
+INSERT INTO bilibili_video VALUES(null,'哈利波特混剪：这些魔法，你能认出几个','http://localhost:3000/images/person/harry.webp','00:02:25.000000',1,'2018-11-16',226000, 24000,5);
+INSERT INTO bilibili_video VALUES(null,'【某幻君/毛豆】绝对不要点进来第二弹，我和我的homie不音痴版红尘客栈','http://localhost:3000/images/person/mouhuan.webp','00:04:33.000000',3,'2018-09-23',349000, 21000,5);
+INSERT INTO bilibili_video VALUES(null,'朱一龙 含着棒棒糖脱西装的居老师简直苏断腿辽！','http://localhost:3000/images/person/bbtjulaoshi.webp','00:02:18.000000',4,'2018-07-27', 218000, 14000,5);
+INSERT INTO bilibili_video VALUES(null,'【朱一龙】性感居居! 在线狙心! 98k踩点眨眼杀（ handclap完整版）这一眼下去你就被狙死了','http://localhost:3000/images/person/zyjulaoshi.webp','00:06:33.000000',5,'2018-07-16', 687000, 74000,5);
+INSERT INTO bilibili_video VALUES(null,'【欧美混剪】【暗黑向】黑化病娇什么的最可爱了','http://localhost:3000/images/person/bjly.webp','00:04:17.000000',6,'2017-06-01', 195000, 16000,5);
+INSERT INTO bilibili_video VALUES(null,'朱一龙 X 抖音大合集 甜咸萌仙皆有 速来舔屏！！！','http://localhost:3000/images/person/dyjulaoshi.webp','00:01:23.000000',7,'2018-07-08', 113000, 10000,5);
+INSERT INTO bilibili_video VALUES(null,'《镇魂》花絮合集（已完结）+180703白宇朱一龙一直播','http://localhost:3000/images/person/zhenhun.webp','02:11:43.000000',8,'2018-06-18', 207000, 19000,5);
+INSERT INTO bilibili_video VALUES(null,'【自制字幕】Sword Art Online刀剑神域夏日祭201','http://localhost:3000/images/person/daojian.webp','01:19:58.000000',9,'2018-07-09', 81000, 4224,5);
+INSERT INTO bilibili_video VALUES(null,'【教程】三步教会你头部起稿，超简单！','http://localhost:3000/images/person/jiaoc.webp','00:01:15.000000',10,'2018-03-31', 420000, 21000,5);
+INSERT INTO bilibili_video VALUES(null,'【神谷浩史】你可能会被撩到立地暴毙','http://localhost:3000/images/person/kamiya.webp','00:04:21.000000',12,'2017-11-16', 95000, 14000,5);
+INSERT INTO bilibili_video VALUES(null,'【鬼灯的冷彻】咯叽咯叽山','http://localhost:3000/images/person/kajikaji.webp','00:01:33.000000',11,'2017-10-29', 51000, 4105,5);
+
+
+CREATE TABLE bilibili_person(
+ sid INT PRIMARY KEY AUTO_INCREMENT, 
+ uid INT,
+ vid int,
+ save_time datetime,
+ sdir int
+);
+#:收藏 type1
+INSERT INTO bilibili_person VALUES(null,1,27,"2018-11-18 09:51:00",1);
+INSERT INTO bilibili_person VALUES(null,1,28,"2018-10-19 09:51:00",1);
+INSERT INTO bilibili_person VALUES(null,1,29,"2018-10-18 20:27:00",1);
+INSERT INTO bilibili_person VALUES(null,1,30,"2018-07-31 00:00:00",1);
+INSERT INTO bilibili_person VALUES(null,1,31,"2018-07-31 00:00:00",1);
+INSERT INTO bilibili_person VALUES(null,1,32,"2018-07-30 00:00:00",1);
+INSERT INTO bilibili_person VALUES(null,1,33,"2018-07-24 00:00:00",1);
+INSERT INTO bilibili_person VALUES(null,1,34,"2018-07-10 00:00:00",1);
+INSERT INTO bilibili_person VALUES(null,1,35,"2018-04-03 00:00:00",1);
+INSERT INTO bilibili_person VALUES(null,1,36,"2017-11-21 00:00:00",1);
+INSERT INTO bilibili_person VALUES(null,1,37,"2017-11-10 00:00:00",1);
+INSERT INTO bilibili_person VALUES(null,1,24,"2018-11-26 19:35:29",2);
+INSERT INTO bilibili_person VALUES(null,1,25,"2018-11-21 18:00:00",2);
+INSERT INTO bilibili_person VALUES(null,1,26,"2017-11-10 00:00:00",2);
+INSERT INTO bilibili_person VALUES(null,2,11,"2018-11-26 19:35:29",1);
+INSERT INTO bilibili_person VALUES(null,2,15,"2018-11-21 18:00:00",1);
+INSERT INTO bilibili_person VALUES(null,2,20,"2017-11-10 00:00:00",1);

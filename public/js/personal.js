@@ -3,14 +3,15 @@ $(function(){
 	$.ajax({
 		url:"http://localhost:3000/personal",
 		type:"get",
-		data:{pno},
+		data:{pno,sdir:1},
 		dataType:"json",
 		success:function(res){
+			console.log(res);
 			var result = res;
 			var html = "";
 			for(var r of result){
 				// 获取对象中属性
-				var {vid,title,vimg,vtime,uid,uname,contribute_time,play_num,collect_num,collect_time} = r;
+				var {vid,title,img_url,vtime,uname,contribute_time,play_num,collect_num,save_time} = r;
 				// 数量上转换
 				var playNum = play_num>10000 ? (play_num/10000).toFixed(1)+'万' : play_num;
 				var collectNum = collect_num>10000 ? (collect_num/10000).toFixed(1)+'万' : collect_num;
@@ -26,7 +27,7 @@ $(function(){
 				}
 				// - 收藏时间转换 - 
 				var time = new Date();
-				var cTime = new Date(collect_time);
+				var cTime = new Date(save_time);
 				var s = parseInt((time-cTime)/1000);
 				var m = parseInt(s/60);
 				var h = parseInt(m/60);
@@ -41,7 +42,7 @@ $(function(){
 					<div class="mr-card">
 						<div class="card-content f-position">
 							<a href="kajikaji.html">
-								<img src="${vimg}" alt="" class="card-img">
+								<img src="${img_url}" alt="" class="card-img">
 								<div class="video-time"><span>${vTime}</span></div>
 								<div class="card-detail">
 									<p>播放：${playNum}</p>
