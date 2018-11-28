@@ -375,7 +375,8 @@ i.play-icon {
   background-color: #384245;
   color: #737A7C;
   font-size: 14px;
-  z-index: 100; }
+  z-index: 100;
+  cursor: default; }
   .music-play div {
     border: solid 1px red; }
   .music-play .mp-margin {
@@ -406,6 +407,8 @@ i.play-icon {
           height: 28px;
           transition: 0.2s;
           fill: #fff; }
+        .music-play .mp-margin div.mp-con div.mplay div.mp-prev:hover svg, .music-play .mp-margin div.mp-con div.mplay div.mp-next:hover svg {
+          fill: #32b0da; }
         .music-play .mp-margin div.mp-con div.mplay div.mp-start svg {
           width: 36px;
           height: 36px;
@@ -460,9 +463,15 @@ i.play-icon {
           vertical-align: middle;
           cursor: pointer;
           padding: 0 8px; }
+          .music-play .mp-margin div.mp-con div.tool div:hover svg {
+            fill: #32b0da; }
         .music-play .mp-margin div.mp-con div.tool div.collect {
           margin-left: 16px; }
-        .music-play .mp-margin div.mp-con div.tool div.collect > svg, .music-play .mp-margin div.mp-con div.tool div.volume > svg, .music-play .mp-margin div.mp-con div.tool div.order > svg {
+        .music-play .mp-margin div.mp-con div.tool div.collect:hover svg, .music-play .mp-margin div.mp-con div.tool div.volume:hover svg, .music-play .mp-margin div.mp-con div.tool div.order:hover svg, .music-play .mp-margin div.mp-con div.tool div.s-list-bg:hover svg {
+          fill: #32b0da; }
+        .music-play .mp-margin div.mp-con div.tool div.collect:hover span, .music-play .mp-margin div.mp-con div.tool div.volume:hover span, .music-play .mp-margin div.mp-con div.tool div.order:hover span, .music-play .mp-margin div.mp-con div.tool div.s-list-bg:hover span {
+          color: #32b0da; }
+        .music-play .mp-margin div.mp-con div.tool div.collect > svg, .music-play .mp-margin div.mp-con div.tool div.volume > svg, .music-play .mp-margin div.mp-con div.tool div.order > svg, .music-play .mp-margin div.mp-con div.tool div.s-list-bg > svg {
           height: 28px;
           width: 28px;
           vertical-align: middle;
@@ -487,3 +496,11 @@ i.play-icon {
             top: -4px;
             left: -6px;
             cursor: pointer; }
+        .music-play .mp-margin div.mp-con div.tool div.s-list-bg {
+          background: #4A5355;
+          height: 28px;
+          border-radius: 14px;
+          padding: 0 8px 0 6px; }
+          .music-play .mp-margin div.mp-con div.tool div.s-list-bg > span {
+            transition: 0.2s;
+            color: #fff; }

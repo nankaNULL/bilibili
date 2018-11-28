@@ -477,6 +477,7 @@ i{
     color: #737A7C;
     font-size: 14px;
     z-index: 100;
+    cursor: default;
     div{border:solid 1px red;}
     .mp-margin{
         margin:0 auto;
@@ -506,6 +507,11 @@ i{
                     height: 28px;
                     transition: 0.2s;
                     fill: #fff;
+                }
+                div.mp-prev,div.mp-next{
+                    &:hover svg{
+                        fill:$border_blue;
+                    }
                 }
                 div.mp-start svg{
                     width: 36px;
@@ -567,9 +573,18 @@ i{
                     vertical-align: middle;
                     cursor: pointer;
                     padding:0 8px;
+                    &:hover svg{
+                        fill:$border_blue;
+                    }
                 }
                 div.collect{margin-left:16px;}
-                div.collect>svg,div.volume>svg,div.order>svg{
+                div.collect,div.volume,div.order,div.s-list-bg{
+                    &:hover svg{
+                        fill:$border_blue;
+                    }
+                    &:hover span{color:$border_blue;}
+                }
+                div.collect>svg,div.volume>svg,div.order>svg,div.s-list-bg>svg{
                     height:28px;
                     width:28px;
                     vertical-align: middle;
@@ -597,6 +612,16 @@ i{
                         top: -4px;
                         left: -6px;
                         cursor: pointer;
+                    }
+                }
+                div.s-list-bg{
+                    background: #4A5355;
+                    height: 28px;
+                    border-radius: 14px;
+                    padding: 0 8px 0 6px;
+                    &>span{
+                        transition:0.2s;
+                        color:#fff;
                     }
                 }
             }
