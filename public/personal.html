@@ -8,6 +8,14 @@
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/iconfont.css">
 		<link rel="stylesheet" href="css/personal.css">
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/personal.js"></script>
+		<script src="js/header.js"></script>
+		<style>
+			div.nav-content{
+				width: 1098px !important;
+			}
+		</style>
 	</head>
 	<body>
 		<header></header>
@@ -19,11 +27,11 @@
 					</div>
 					<div class="person-r">
 						<div class="p-rt">
-							<span>木有鱼丸嘤</span>
+							<span>木有鱼丸嘤11</span>
 							<span class="bg-blue radius-4">LV3</span>
 						</div>
 						<div class="p-rb">
-							<input type="text" placeholder="编辑个性签名">
+							<input type="text" placeholder="编辑个性签名" value="赞词何在">
 						</div>
 					</div>
 				</div>
@@ -31,7 +39,7 @@
 			<div class="m-content">
 				<div class="c-title">
 					<ul class="clearfix">
-						<li class="title-list border-blue">
+						<li class="title-list">
 							<a href="#">
 								<span class="iconfont icon-ic_home"></span>
 								<span class="t-text">主页</span>
@@ -94,60 +102,71 @@
 							</a>
 						</div>
 					</div>
+					<div class="slider-block">
+
+					</div>
 				</div>
 				<div class="t-collection">
 					<div class="collection-l">
 						<div class="col-video">
 							<p>视频收藏</p>
-							<ul>
+							<ul class="col-list-con">
 								<li class="collection-list col-active" title="默认收藏夹">
 									<a href="#">
+										<i class="icon-star"></i>
 										<span>默认收藏夹</span>
 										<span title="更多操作" class="col-more">60</span>
 									</a>
 								</li>
-								<li class="collection-list">
+								<!-- <li class="collection-list">
 									<a href="#">
+										<i class="icon-dir"></i>
 										<span>画</span>
 										<span title="更多操作" class="col-more">1</span>
 									</a>
 								</li>
 								<li class="collection-list">
 									<a href="#">
+										<i class="icon-dir"></i>
 										<span>吃</span>
 										<span title="更多操作" class="col-more">32</span>
 									</a>
 								</li>
 								<li class="collection-list">
 									<a href="#">
+										<i class="icon-dir"></i>
 										<span>电影</span>
 										<span title="更多操作" class="col-more">2</span>
 									</a>
 								</li>
 								<li class="collection-list">
 									<a href="#">
+										<i class="icon-dir"></i>
 										<span>手书</span>
 										<span title="更多操作" class="col-more">26</span>
 									</a>
 								</li>
 								<li class="collection-list">
 									<a href="#">
+										<i class="icon-dir"></i>
 										<span>鬼畜</span>
 										<span title="更多操作" class="col-more">9</span>
 									</a>
 								</li>
 								<li class="collection-list">
 									<a href="#">
+										<i class="icon-dir"></i>
 										<span>舞</span>
 										<span title="更多操作" class="col-more">9</span>
 									</a>
 								</li>
 								<li class="collection-list">
 									<a href="#">
+										<i class="icon-dir"></i>	
 										<span>曲</span>
 										<span title="更多操作" class="col-more">20</span>
 									</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 						<div class="col-video">
@@ -193,7 +212,7 @@
 								</div>
 								<div class="mr-b">
 									<div class="mr-b-l">
-										<span>公开&nbsp;&nbsp;·&nbsp;&nbsp;60个视频</span>
+										<span>公开&nbsp;&nbsp;·&nbsp;&nbsp;<span class="dnum">0</span>个视频</span>
 									</div>
 									<div class="mr-b-r">
 										<div><a href="#">批量操作</a></div>
@@ -207,11 +226,14 @@
 								</div>
 							</div>
 							<div class="mr-content" style="border:solid 1px red">
+								<div class="empty">
+									<p>该收藏夹还没有视频哦~</p>
+								</div>
 								<div class="card-container" style="border:solid 1px red">
 									<div class="mr-card">
 										<div class="card-content f-position">
 											<a href="kajikaji.html">
-												<img src="${vimg}" alt="" class="card-img">
+												<img src="" alt="" class="card-img">
 												<div class="video-time"><span>${vtime}</span></div>
 												<div class="card-detail f-position">
 													<p>播放：${playNum}</p>
@@ -234,12 +256,13 @@
 									</div>
 								</div>
 								<div class="mr-page" style="border:solid 1px red">
-									<div " style="border:solid 1px red">
-										<a href="#" class="page-pre">上一页</a>
+									<div style="border:solid 1px red">
+										<!-- <a href="#" class="page-pre">上一页</a>
 										<a href="#" class="page-active">1</a>
 										<a href="#">2</a>
 										<a href="#">3</a>
-										<a href="#" class="page-next">下一页</a>
+										<a href="#" class='page-list'>5</a>
+										<a href="#" class="page-next">下一页</a> -->
 									</div>
 									<div class="to-page">共<span>3</span>页，跳至<input type="text">页</div>
 								</div>
@@ -249,8 +272,57 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/jquery-3.2.1.js"></script>
-		<script src="js/personal.js"></script>
-		<script src="js/header.js"></script>
+		<script>
+			$(function(){
+				// tab标签页 获取文件夹
+				$.ajax({
+					url:"http://localhost:3000/personal/dir",
+					type:"get",
+					// dataType:"json",默认就是这个，所有可以不写
+					success:(res)=>{
+						var html = '';
+						for(var r of res){// col-active
+							html += `
+							<li class="collection-list" title="${r.label}">
+								<a href="#">
+									<i class="icon-dir"></i>
+									<span class='col-label'>${r.label}</span>
+									<span title="更多操作" class="col-more">${r.dnum}</span>
+								</a>
+							</li>`;
+						}
+						$(".col-list-con").html(html);
+						$(".col-list-con .collection-list:first-child").addClass("col-active").find("i").removeClass("icon-dir").addClass("icon-star");
+						$(".mr-t>p").html($(".col-list-con .collection-list:first-child").find('.col-label').html());
+						$(".dnum").html($(".col-list-con .collection-list:first-child").find('.col-more').html());
+					}
+				})
+				// 个性签名的 input 框
+				$(".p-rb input").focus(function(){
+					$(this).css({"background":"#fff","color":"#aaa"})
+				})
+				$(".p-rb input").blur(function(){
+					$(this).css({"background":"transparent","color":"#d6dee4"})
+				})
+				// tab下的滑块
+				$(".slider-block").css({"left":$(".title-list.active").position().left,"width":$(".title-list.active").width()});
+				// $(".title-list").hover(
+				// 	function(){
+				// 		$(".slider-block").css({"left":$(this).position().left,"width":$(this).width()});
+				// 	},function(){
+				// 		$(".slider-block").css({"left":$(".title-list.active").position().left,"width":$(".title-list.active").width()});
+				// 	}
+				// )
+				$(".c-title").hover(function(){
+						$(".title-list:not(:last)").hover(function(){
+							$(".slider-block").css({"left":$(this).position().left,"width":$(this).width()});
+						});
+					},function(){
+						$(".slider-block").css({"left":$(".title-list.active").position().left,"width":$(".title-list.active").width()});
+					}
+				)
+			})
+		</script>
 	</body>
 </html>
+

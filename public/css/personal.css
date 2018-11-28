@@ -2,12 +2,13 @@
 p,span{font-size: 12px;}
 .content{width:1100px;margin:0 auto;}
 .m-header{
+	position: relative;
 	height:200px;
 	background:url(../images/bg-person.webp);
 }
 .h-person{
 	position: absolute;
-	top:154px;
+	bottom: 0;
 	width: 100%;
 	height:84px;
 	display: flex;
@@ -34,37 +35,53 @@ p,span{font-size: 12px;}
 }
 .p-rb input{
 	/*position: relative;*/
-	width:740px;
-	height:26px;
+	width: 730px;
+	line-height: 26px;
+    height: 26px;
 	background: transparent;
 	margin:5px 0 0 -5px;
-	border:0;
-	/*color:#D6DEE4;*/
+	border-radius: 4px;
+    border: none;
+	color: #d6dee4;
 	outline: none;box-sizing: border-box;
 	padding:0 5px;
 }
 .p-rb input:hover{
 	/*left:-2px;*/
 	border:solid 1px #cececf;
-	background: #c1c1c1;
+	background: rgba(255,255,255,.5);
 	border-radius: 4px;
 	margin-left:-6px;
-	transition: all 0.3s linear;
+	transition: all .3s ease;
 }
 /* -- emm下面的分页title -- */
 
 .c-title{
+	position: relative;
 	border:solid 1px #EFEFEF;
 	height:63px;
 }
-.c-title ul{float:left;}
+.c-title ul{float:left;margin-left:20px;}
 .title-list{
 	float:left;
 	margin-right: 20px;
 	padding:20px 0;
+	transition:all .2s ease;
+	cursor: pointer;
 }
+.title-list span.t-text,.collection-list span:nth-child(2){transition:all .2s ease;}
+.title-list:hover span.t-text{color:#00A1D6;}
 li.active{
-	border-bottom:solid 3px #00A1D6;
+	/* border-bottom:solid 3px #00A1D6; */
+}
+.slider-block{
+	background:#00A1D6;
+	width: 75px;
+	height: 3px;
+    transition: all .2s ease;
+    position: absolute;
+	bottom: -1px;
+	left:0;
 }
 .t-text{
 	color:black;
@@ -102,19 +119,55 @@ li.active{
 	padding:18px 0;
 	border-bottom:solid 1px #EFEFEF;
 }
-.col-video>p{margin:0 0 12px 15px ;}
+.col-video>p{
+	margin:0 0 12px 20px;
+	color: #99a2aa;
+	font-size: 14px;
+}
 .collection-list{
 	overflow: hidden;
-	padding:10px 10px 10px 40px;
+	padding:10px 10px 10px 20px;
+	cursor: pointer;
+}
+.collection-list span.col-label{
+	font-size: 14px;
+	vertical-align: middle;
+}
+.collection-list:hover span:nth-child(2){
+	color:#00A1D6;
+}
+.collection-list.col-active:hover span:nth-child(2){
+	color:#fff
+}
+.collection-list i{
+	background:url(../images/person/icons.png) no-repeat;   
+	display: inline-block;
+	margin-right:9px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+i.icon-star{
+    background-position: -22px -1110px;
+}
+i.icon-dir{
+    background-position: -86px -1110px;
 }
 .col-active{
 	background: #00A1D6;
 }
 .col-active a,.col-active span{color:white;}
+.col-active i.icon-dir{
+	background-position: -86px -1047px;
+}
+.col-active i.icon-star{
+	background-position: -22px -1047px;
+}
 .col-more{
 	float: right;
 	font-size: 12px;
 	color:gray;
+	margin-top:2px;
 }
 /* -- 下面content 右边 默认收藏夹 的列表-- */
 .collection-r{
@@ -161,6 +214,20 @@ li.active{
 /* -- card -- */
 /*.mr-content{display: flex;flex-wrap: wrap;}*/
 /*.mr-card,.mr-card div{border:solid 1px black;}*/
+.mr-content>div.empty{
+	padding: 300px 0 80px;
+    border-radius: 4px;
+    color: #6d757a;
+    overflow: hidden;
+    text-align: center;
+    background-image: url(../images/no-data.940dc0f.png);
+    background-position: center 120px;
+    background-repeat: no-repeat;
+}
+.mr-content>div.empty>p{
+	font-size: 14px;
+    color: #6d757a;
+}
 .card-container{width:100%;overflow: hidden;}
 .mr-card{
 	float:left;

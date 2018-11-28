@@ -115,3 +115,22 @@ INSERT INTO bilibili_person VALUES(null,1,26,"2017-11-10 00:00:00",2);
 INSERT INTO bilibili_person VALUES(null,2,11,"2018-11-26 19:35:29",1);
 INSERT INTO bilibili_person VALUES(null,2,15,"2018-11-21 18:00:00",1);
 INSERT INTO bilibili_person VALUES(null,2,20,"2017-11-10 00:00:00",1);
+
+CREATE TABLE bilibili_dir(
+ did INT PRIMARY KEY AUTO_INCREMENT, 
+ uid INT,
+ sdir int,
+ label varchar(16),
+ dnum int
+);
+#:收藏 type1
+INSERT INTO bilibili_dir VALUES(null,1,1,"默认收藏夹",11);
+INSERT INTO bilibili_dir VALUES(null,1,2,"画",3);
+INSERT INTO bilibili_dir VALUES(null,1,3,"吃",0);
+INSERT INTO bilibili_dir VALUES(null,1,4,"电影",0);
+INSERT INTO bilibili_dir VALUES(null,1,5,"手书",0);
+INSERT INTO bilibili_dir VALUES(null,1,6,"鬼畜",0);
+INSERT INTO bilibili_dir VALUES(null,1,7,"舞",0);
+INSERT INTO bilibili_dir VALUES(null,1,8,"曲",0);
+INSERT INTO bilibili_dir VALUES(null,2,1,"默认收藏夹",3);
+INSERT INTO bilibili_dir VALUES(null,2,2,"曲",0);

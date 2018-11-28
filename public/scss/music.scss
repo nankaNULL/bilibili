@@ -466,3 +466,141 @@ i{
         }
     }
 }
+// 音乐播放器
+.music-play{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #384245;
+    color: #737A7C;
+    font-size: 14px;
+    z-index: 100;
+    div{border:solid 1px red;}
+    .mp-margin{
+        margin:0 auto;
+        width:1110px;
+        height:100%;
+        div.mp-con{
+            width:100%;
+            height:100%;
+            display:flex;
+            div.mplay{
+                height:100%;
+                img,div{
+                    display: inline-flex;
+                    height:100%;
+                    justify-content: center;
+                    align-items: center;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+                div.mp-prev, div.mp-start,div.mp-next{
+                    padding:0 8px ;
+                }
+                div.mp-prev{margin-left: 16px;}
+                div.mp-next{margin-right: 16px;}
+                div.mp-prev svg,div.mp-next svg{
+                    width: 28px;
+                    height: 28px;
+                    transition: 0.2s;
+                    fill: #fff;
+                }
+                div.mp-start svg{
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    background: rgba(50, 176, 218, 0.3);
+                    fill:#32b0da;
+                }
+            }
+            div.progress{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                padding:10px 0;
+                height:60px;
+                .info{
+                    display: flex;
+                    .mp-title,.mp-time{
+                        color:#ffffff;
+                        span{color:#737A7C;margin-left: 6px;}
+                    }
+                    .mp-time{flex:1;text-align: right;span{margin-left: 0px;}}
+                }
+                .mp-progress{
+                    width:100%;
+                    padding:10px 0 ;
+                    position: relative; 
+                    .track{
+                        position: relative;
+                        background:#909090;
+                        &,&>.track-top{
+                            height: 3px;
+                            width:100%;
+                            border-radius: 1.5px;
+                        }
+                        .track-top{
+                            background: rgba(50, 176, 218, 0.47);
+                        }
+                        .slider-box{
+                            position: absolute;
+                            top:-5px;
+                            left:-4px;
+                            svg{
+                                height:19px;
+                                width:21px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            div.tool{
+                height:100%;
+                div{
+                    height:100%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    padding:0 8px;
+                }
+                div.collect{margin-left:16px;}
+                div.collect>svg,div.volume>svg,div.order>svg{
+                    height:28px;
+                    width:28px;
+                    vertical-align: middle;
+                    transition:0.2s;
+                    fill:#fff;
+                }
+                div.line>div{
+                    height: 24px;
+                    width: 1px;
+                    padding:0;
+                    background: #979797;
+                }
+                div.volume-track{
+                    position: relative;
+                    margin-right: 8px;
+                    background: #909090;
+                    &,&>div.track-top{
+                        width: 86px;
+                        height:3px;
+                        border-radius: 1.5px;
+                        background: #32B0DA;
+                    }
+                    div.volume-track-dot{
+                        position: absolute;
+                        top: -4px;
+                        left: -6px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        
+    }
+}

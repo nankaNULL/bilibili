@@ -365,3 +365,125 @@ i.play-icon {
         color: #00a1d6;
         text-align: center;
         line-height: 28px; }
+
+.music-play {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #384245;
+  color: #737A7C;
+  font-size: 14px;
+  z-index: 100; }
+  .music-play div {
+    border: solid 1px red; }
+  .music-play .mp-margin {
+    margin: 0 auto;
+    width: 1110px;
+    height: 100%; }
+    .music-play .mp-margin div.mp-con {
+      width: 100%;
+      height: 100%;
+      display: flex; }
+      .music-play .mp-margin div.mp-con div.mplay {
+        height: 100%; }
+        .music-play .mp-margin div.mp-con div.mplay img, .music-play .mp-margin div.mp-con div.mplay div {
+          display: inline-flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          vertical-align: middle;
+          cursor: pointer; }
+        .music-play .mp-margin div.mp-con div.mplay div.mp-prev, .music-play .mp-margin div.mp-con div.mplay div.mp-start, .music-play .mp-margin div.mp-con div.mplay div.mp-next {
+          padding: 0 8px; }
+        .music-play .mp-margin div.mp-con div.mplay div.mp-prev {
+          margin-left: 16px; }
+        .music-play .mp-margin div.mp-con div.mplay div.mp-next {
+          margin-right: 16px; }
+        .music-play .mp-margin div.mp-con div.mplay div.mp-prev svg, .music-play .mp-margin div.mp-con div.mplay div.mp-next svg {
+          width: 28px;
+          height: 28px;
+          transition: 0.2s;
+          fill: #fff; }
+        .music-play .mp-margin div.mp-con div.mplay div.mp-start svg {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background: rgba(50, 176, 218, 0.3);
+          fill: #32b0da; }
+      .music-play .mp-margin div.mp-con div.progress {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        height: 60px; }
+        .music-play .mp-margin div.mp-con div.progress .info {
+          display: flex; }
+          .music-play .mp-margin div.mp-con div.progress .info .mp-title, .music-play .mp-margin div.mp-con div.progress .info .mp-time {
+            color: #ffffff; }
+            .music-play .mp-margin div.mp-con div.progress .info .mp-title span, .music-play .mp-margin div.mp-con div.progress .info .mp-time span {
+              color: #737A7C;
+              margin-left: 6px; }
+          .music-play .mp-margin div.mp-con div.progress .info .mp-time {
+            flex: 1;
+            text-align: right; }
+            .music-play .mp-margin div.mp-con div.progress .info .mp-time span {
+              margin-left: 0px; }
+        .music-play .mp-margin div.mp-con div.progress .mp-progress {
+          width: 100%;
+          padding: 10px 0;
+          position: relative; }
+          .music-play .mp-margin div.mp-con div.progress .mp-progress .track {
+            position: relative;
+            background: #909090; }
+            .music-play .mp-margin div.mp-con div.progress .mp-progress .track, .music-play .mp-margin div.mp-con div.progress .mp-progress .track > .track-top {
+              height: 3px;
+              width: 100%;
+              border-radius: 1.5px; }
+            .music-play .mp-margin div.mp-con div.progress .mp-progress .track .track-top {
+              background: rgba(50, 176, 218, 0.47); }
+            .music-play .mp-margin div.mp-con div.progress .mp-progress .track .slider-box {
+              position: absolute;
+              top: -5px;
+              left: -4px; }
+              .music-play .mp-margin div.mp-con div.progress .mp-progress .track .slider-box svg {
+                height: 19px;
+                width: 21px; }
+      .music-play .mp-margin div.mp-con div.tool {
+        height: 100%; }
+        .music-play .mp-margin div.mp-con div.tool div {
+          height: 100%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          vertical-align: middle;
+          cursor: pointer;
+          padding: 0 8px; }
+        .music-play .mp-margin div.mp-con div.tool div.collect {
+          margin-left: 16px; }
+        .music-play .mp-margin div.mp-con div.tool div.collect > svg, .music-play .mp-margin div.mp-con div.tool div.volume > svg, .music-play .mp-margin div.mp-con div.tool div.order > svg {
+          height: 28px;
+          width: 28px;
+          vertical-align: middle;
+          transition: 0.2s;
+          fill: #fff; }
+        .music-play .mp-margin div.mp-con div.tool div.line > div {
+          height: 24px;
+          width: 1px;
+          padding: 0;
+          background: #979797; }
+        .music-play .mp-margin div.mp-con div.tool div.volume-track {
+          position: relative;
+          margin-right: 8px;
+          background: #909090; }
+          .music-play .mp-margin div.mp-con div.tool div.volume-track, .music-play .mp-margin div.mp-con div.tool div.volume-track > div.track-top {
+            width: 86px;
+            height: 3px;
+            border-radius: 1.5px;
+            background: #32B0DA; }
+          .music-play .mp-margin div.mp-con div.tool div.volume-track div.volume-track-dot {
+            position: absolute;
+            top: -4px;
+            left: -6px;
+            cursor: pointer; }
