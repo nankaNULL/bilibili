@@ -280,7 +280,7 @@
                             <div class="mp-progress">
                                 <div class="track">
                                     <div class="track-top"></div>
-                                    <div class="slider-box">
+                                    <div class="slider-box" id="pop">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" class="ap-svg-exclude"><path fill="#32b0da" opacity="0.28" d="M11.789 1.207h11.789c3.72 0 6.737 3.016 6.737 6.737v8.421c0 3.72-3.016 6.737-6.737 6.737h-11.789c-3.72 0-6.737-3.016-6.737-6.737v-8.421c0-3.72 3.016-6.737 6.737-6.737z"></path><path fill="#32b0da" opacity="0.14" d="M12.211 2.050h10.947c3.488 0 6.316 2.828 6.316 6.316v7.579c0 3.488-2.828 6.316-6.316 6.316h-10.947c-3.488 0-6.316-2.828-6.316-6.316v-7.579c0-3.488 2.828-6.316 6.316-6.316z"></path><path fill="#000" d="M22.737 2.969c3.256 0 5.895 2.627 5.895 5.866v6.705c0 3.24-2.639 5.866-5.895 5.866h-10.105c-3.256 0-5.895-2.626-5.895-5.866v-6.705c0-3.239 2.639-5.866 5.895-5.866h10.105z"></path><path fill="#fff" d="M22.737 2.969c3.256 0 5.895 2.627 5.895 5.866v6.705c0 3.24-2.639 5.866-5.895 5.866h-10.105c-3.256 0-5.895-2.626-5.895-5.866v-6.705c0-3.239 2.639-5.866 5.895-5.866h10.105z"></path><path fill="#333" d="M13.053 9.706c0.697 0 1.263 0.566 1.263 1.263v2.526c0 0.697-0.566 1.263-1.263 1.263s-1.263-0.566-1.263-1.263v-2.526c0-0.697 0.566-1.263 1.263-1.263z"></path><path fill="#333" d="M22.316 9.706c0.697 0 1.263 0.566 1.263 1.263v2.526c0 0.697-0.566 1.263-1.263 1.263s-1.263-0.566-1.263-1.263v-2.526c0-0.697 0.566-1.263 1.263-1.263z"></path><path fill="#333" d="M26.947 15.538c0 2.321-1.89 4.211-4.211 4.211h-10.105c-2.321 0-4.211-1.89-4.211-4.211v-6.737c0-2.323 1.89-4.211 4.211-4.211h10.105c2.321 0 4.211 1.888 4.211 4.211v6.737zM23.020 2.935l0.6-1.041c0.349-0.603 0.143-1.376-0.461-1.725s-1.376-0.141-1.725 0.461l-1.314 2.275h-4.871l-1.314-2.275c-0.349-0.603-1.122-0.81-1.725-0.461-0.605 0.349-0.812 1.122-0.463 1.725l0.601 1.041c-3.121 0.15-5.612 2.708-5.612 5.866v6.737c0 3.256 2.639 5.895 5.895 5.895h10.105c3.256 0 5.895-2.639 5.895-5.895v-6.737c0-3.16-2.491-5.716-5.612-5.866z"></path>
                                     </div>
                                 </div>
@@ -311,31 +311,31 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="mp-list">
-                    <div class="title">
-                        <div>
-                            <span>播放列表</span>
-                            <span>(共20首)</span>
+                    <div class="mp-list">
+                        <div class="title">
+                            <div>
+                                <span>播放列表</span>
+                                <span>(共20首)</span>
+                            </div>
+                            <div class="trash"><i></i>清空列表</div>
+                            <div class="close">×</div>
                         </div>
-                        <div class="trash"><i></i>清空列表</div>
-                        <div class="close">×</div>
-                    </div>
-                    <div>
-                        <ul>
-                            <li class="play-list">
-                                <div class="title">chuyin</div>
-                                <div>chuy</div>
-                                <div class="trash"></div>
-                            </li>
-                        </ul>
+                        <div>
+                            <ul>
+                                <li class="play-list">
+                                    <div class="title">chuyin</div>
+                                    <div>chuy</div>
+                                    <div class="trash"></div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <script src="js/jquery-3.2.1.js"></script>
         <script src="js/vue.js"></script>
-        <!-- <script src="js/music.js"></script> -->
+        <script src="js/music.js"></script>
 		<script src="js/header.js"></script>
         <script src="js/slider.js"></script>
         <script>

@@ -377,9 +377,8 @@ i.play-icon {
   font-size: 14px;
   z-index: 100;
   cursor: default; }
-  .music-play div {
-    border: solid 1px red; }
   .music-play .mp-margin {
+    position: relative;
     margin: 0 auto;
     width: 1110px;
     height: 100%; }
@@ -449,7 +448,8 @@ i.play-icon {
             .music-play .mp-margin div.mp-con div.progress .mp-progress .track .slider-box {
               position: absolute;
               top: -5px;
-              left: -4px; }
+              left: -4px;
+              cursor: pointer; }
               .music-play .mp-margin div.mp-con div.progress .mp-progress .track .slider-box svg {
                 height: 19px;
                 width: 21px; }
@@ -495,7 +495,16 @@ i.play-icon {
             position: absolute;
             top: -4px;
             left: -6px;
-            cursor: pointer; }
+            cursor: pointer;
+            background: #32B0DA;
+            height: 12px;
+            width: 12px;
+            padding: 0;
+            border-radius: 50%;
+            opacity: 0;
+            transition: .2s; }
+            .music-play .mp-margin div.mp-con div.tool div.volume-track div.volume-track-dot:hover {
+              opacity: 1; }
         .music-play .mp-margin div.mp-con div.tool div.s-list-bg {
           background: #4A5355;
           height: 28px;
@@ -504,3 +513,14 @@ i.play-icon {
           .music-play .mp-margin div.mp-con div.tool div.s-list-bg > span {
             transition: 0.2s;
             color: #fff; }
+    .music-play .mp-margin div.mp-list {
+      position: absolute;
+      width: 620px;
+      right: 0;
+      bottom: 60px;
+      background-color: #384245;
+      border-radius: 6px 6px 0 0;
+      transition: 0.3s;
+      color: rgba(255, 255, 255, 0.4); }
+      .music-play .mp-margin div.mp-list span, .music-play .mp-margin div.mp-list div {
+        color: rgba(255, 255, 255, 0.4); }
