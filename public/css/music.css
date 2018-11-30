@@ -424,6 +424,8 @@ i.play-icon {
           display: flex; }
           .music-play .mp-margin div.mp-con div.progress .info .mp-title, .music-play .mp-margin div.mp-con div.progress .info .mp-time {
             color: #ffffff; }
+            .music-play .mp-margin div.mp-con div.progress .info .mp-title span:first-child, .music-play .mp-margin div.mp-con div.progress .info .mp-time span:first-child {
+              color: #fff; }
             .music-play .mp-margin div.mp-con div.progress .info .mp-title span, .music-play .mp-margin div.mp-con div.progress .info .mp-time span {
               color: #737A7C;
               margin-left: 6px; }
@@ -438,13 +440,14 @@ i.play-icon {
           position: relative; }
           .music-play .mp-margin div.mp-con div.progress .mp-progress .track {
             position: relative;
-            background: #909090; }
+            background: #909090;
+            width: 100%; }
             .music-play .mp-margin div.mp-con div.progress .mp-progress .track, .music-play .mp-margin div.mp-con div.progress .mp-progress .track > .track-top {
               height: 3px;
-              width: 100%;
               border-radius: 1.5px; }
             .music-play .mp-margin div.mp-con div.progress .mp-progress .track .track-top {
-              background: rgba(50, 176, 218, 0.47); }
+              background: rgba(50, 176, 218, 0.47);
+              width: 0; }
             .music-play .mp-margin div.mp-con div.progress .mp-progress .track .slider-box {
               position: absolute;
               top: -5px;
@@ -485,12 +488,17 @@ i.play-icon {
         .music-play .mp-margin div.mp-con div.tool div.volume-track {
           position: relative;
           margin-right: 8px;
-          background: #909090; }
+          background: #909090;
+          justify-content: left;
+          width: 86px; }
+          .music-play .mp-margin div.mp-con div.tool div.volume-track, .music-play .mp-margin div.mp-con div.tool div.volume-track > div {
+            padding: 0; }
           .music-play .mp-margin div.mp-con div.tool div.volume-track, .music-play .mp-margin div.mp-con div.tool div.volume-track > div.track-top {
-            width: 86px;
             height: 3px;
-            border-radius: 1.5px;
-            background: #32B0DA; }
+            border-radius: 1.5px; }
+          .music-play .mp-margin div.mp-con div.tool div.volume-track > div.track-top {
+            background: #32B0DA;
+            width: 0; }
           .music-play .mp-margin div.mp-con div.tool div.volume-track div.volume-track-dot {
             position: absolute;
             top: -4px;
@@ -499,10 +507,8 @@ i.play-icon {
             background: #32B0DA;
             height: 12px;
             width: 12px;
-            padding: 0;
             border-radius: 50%;
-            opacity: 0;
-            transition: .2s; }
+            transition: .1s linear; }
             .music-play .mp-margin div.mp-con div.tool div.volume-track div.volume-track-dot:hover {
               opacity: 1; }
         .music-play .mp-margin div.mp-con div.tool div.s-list-bg {

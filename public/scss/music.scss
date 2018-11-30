@@ -532,6 +532,7 @@ i{
                     display: flex;
                     .mp-title,.mp-time{
                         color:#ffffff;
+                        span:first-child{color:#fff}
                         span{color:#737A7C;margin-left: 6px;}
                     }
                     .mp-time{flex:1;text-align: right;span{margin-left: 0px;}}
@@ -543,13 +544,14 @@ i{
                     .track{
                         position: relative;
                         background:#909090;
+                        width:100%;
                         &,&>.track-top{
                             height: 3px;
-                            width:100%;
                             border-radius: 1.5px;
                         }
                         .track-top{
                             background: rgba(50, 176, 218, 0.47);
+                            width:0;
                         }
                         .slider-box{
                             position: absolute;
@@ -603,27 +605,29 @@ i{
                     position: relative;
                     margin-right: 8px;
                     background: #909090;
+                    justify-content: left;
+                    width: 86px;
+                    &,&>div{padding:0;}
                     &,&>div.track-top{
-                        width: 86px;
                         height:3px;
                         border-radius: 1.5px;
+                    }
+                    &>div.track-top{
                         background: #32B0DA;
+                        width:0;
                     }
                     div.volume-track-dot{
                         position: absolute;
                         top: -4px;
                         left: -6px;
-                        // top:1px;
-                        // left:0;
                         cursor: pointer;
                         background:#32B0DA;
                         height:12px;
                         width:12px;
-                        padding:0;
                         border-radius: 50%;
                         // transform: scale(0);
-                        opacity: 0;
-                        transition: .2s;
+                        // opacity: 0;
+                        transition: .1s linear;
                         &:hover{
                             // transform: scale(1);
                             opacity: 1;
