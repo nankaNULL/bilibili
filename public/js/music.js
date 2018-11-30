@@ -2,43 +2,68 @@ $(function(){
     var audio = new Audio("./images/music/xwzcy.mp3");
     var adDuration = 0;
     var isPlay = false;
+    var index = 0;
     audio.oncanplay = function () {
         adDuration = audio.duration;
         console.log("1currentTime: "+audio.currentTime);
         console.log("1duration: "+audio.duration);
     }
     var timer = null;
+    // 点击播放列表中对应歌曲
+    $(".rlist-item").click(function(){
+        index = $(this).index();
+        audio.src = './images/music/'+$(this).attr("data-music");
+        audioPlay();
+    })
+    // 点击进行播放下一首
+    $(".mp-next").click(function(){
+        ++index;
+        if(index>4) index = 0;
+        audio.src = './images/music/'+$(`.rlist-item:eq(${index})`).attr("data-music");
+        audioPlay();
+    })
+    // 点击进行播放上一首
+    $(".mp-prev").click(function(){
+        --index;
+        if(index<0) index = 4;
+        audio.src = './images/music/'+$(`.rlist-item:eq(${index})`).attr("data-music");
+        audioPlay();
+    })
     // 点击播放音频
     $(".mp-start").click(function(){
-        // if(!audio) 
         if(!isPlay){
-            audio.play();
-            isPlay = true;
-            audio.loop = true;
-            timer = setInterval(function(){
-                // 间隔
-                var xDuration = $(".mp-progress").width()/adDuration;
-                // 滑块移动，播放条
-                $(".slider-box").css("left",parseFloat($(".slider-box").css("left"))+xDuration);
-                
-                $(".mp-progress .track-top").css("width",parseFloat($(".mp-progress .track-top").width())+xDuration); 
-                // 时间
-                $(".mp-time>span:first-child").html(timeFilter(parseInt(audio.currentTime/60))+":"+timeFilter(parseInt(audio.currentTime%60)));
-
-                // 循环
-                if(parseInt(audio.currentTime) == 0){
-                    console.log("emm?");
-                    $(".slider-box").css("left",-4);
-                    $(".mp-progress .track-top").css("width",0);
-                }
-            },1000);
+            audioPlay();
         }
         else{
             audio.pause();
             isPlay = false;
+            $(".mp-start-s").show().next().hide();
             clearInterval(timer);
         }
     });
+    function audioPlay(){
+        clearInterval(timer);
+        audio.play();
+        isPlay = true;
+        $(".mp-start-s").hide().next().show();
+        audio.loop = true;
+        timer = setInterval(function(){
+            // 间隔
+            var xDuration = $(".mp-progress").width()/adDuration;
+            // 滑块移动，播放条
+            $(".slider-box").css("left",parseFloat($(".slider-box").css("left"))+xDuration);
+            
+            $(".mp-progress .track-top").css("width",parseFloat($(".mp-progress .track-top").width())+xDuration); 
+            // 时间
+            $(".mp-time>span:first-child").html(timeFilter(parseInt(audio.currentTime/60))+":"+timeFilter(parseInt(audio.currentTime%60)));
+
+            // 循环
+            if(parseInt(audio.currentTime) == 0){
+                $(".slider-box").css("left",-4);
+                $(".mp-progress .track-top").css("width",0);
+            }
+        },1000);
+    }
     // 滑块的事件，包括点击，拖动
     function sliderbox($box,$track,$trackparent,pad,type,$toFilter=null){
         // 数据

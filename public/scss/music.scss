@@ -514,12 +514,18 @@ i{
                         fill:$border_blue;
                     }
                 }
-                div.mp-start svg{
-                    width: 36px;
-                    height: 36px;
-                    border-radius: 50%;
-                    background: rgba(50, 176, 218, 0.3);
-                    fill:#32b0da;
+                div.mp-start{
+                    svg{
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        background: rgba(50, 176, 218, 0.3);
+                        fill:#32b0da;
+                        transition:0.2s;
+                    }
+                    &:hover svg{
+                        background:#35798f;
+                    }
                 }
             }
             div.progress{

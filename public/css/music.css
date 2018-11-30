@@ -413,7 +413,10 @@ i.play-icon {
           height: 36px;
           border-radius: 50%;
           background: rgba(50, 176, 218, 0.3);
-          fill: #32b0da; }
+          fill: #32b0da;
+          transition: 0.2s; }
+        .music-play .mp-margin div.mp-con div.mplay div.mp-start:hover svg {
+          background: #35798f; }
       .music-play .mp-margin div.mp-con div.progress {
         flex: 1;
         display: flex;
