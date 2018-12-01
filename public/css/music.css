@@ -529,7 +529,68 @@ i.play-icon {
       bottom: 60px;
       background-color: #384245;
       border-radius: 6px 6px 0 0;
-      transition: 0.3s;
-      color: rgba(255, 255, 255, 0.4); }
+      transition: 0.3s; }
       .music-play .mp-margin div.mp-list span, .music-play .mp-margin div.mp-list div {
-        color: rgba(255, 255, 255, 0.4); }
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 14px;
+        font-weight: lighter; }
+      .music-play .mp-margin div.mp-list svg.icon-trash {
+        width: 12px;
+        height: 12px;
+        transition: 0.2s;
+        fill: rgba(255, 255, 255, 0.4);
+        vertical-align: middle; }
+      .music-play .mp-margin div.mp-list > div.title {
+        padding: 16px 0 16px 20px;
+        display: flex;
+        align-items: center; }
+        .music-play .mp-margin div.mp-list > div.title > div:first-child {
+          flex: 1; }
+          .music-play .mp-margin div.mp-list > div.title > div:first-child span:first-child {
+            color: #fff; }
+        .music-play .mp-margin div.mp-list > div.title > div.close {
+          padding: 0 16px;
+          font-size: 18px; }
+      .music-play .mp-margin div.mp-list > div.title + div {
+        background-color: #455155;
+        height: 260px;
+        overflow: auto; }
+        .music-play .mp-margin div.mp-list > div.title + div::-webkit-scrollbar {
+          width: 6px; }
+        .music-play .mp-margin div.mp-list > div.title + div::-webkit-scrollbar-thumb {
+          background: #aaa;
+          border-radius: 6px; }
+        .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item {
+          display: flex;
+          padding: 10px 0 10px 20px;
+          transition: 0.2s;
+          cursor: pointer;
+          line-height: 21px; }
+          .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item div.title {
+            flex: 1; }
+            .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item div.title > span {
+              border-bottom: 1px solid transparent;
+              transition: border-bottom 0.2s; }
+              .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item div.title > span:hover {
+                border-bottom-color: #32B0DA; }
+          .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item div.title + div {
+            width: 75px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; }
+          .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item div.trash {
+            opacity: 0;
+            width: 50px;
+            text-align: center; }
+            .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item div.trash:hover svg {
+              fill: #32B0DA; }
+          .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item.active {
+            background: #425961; }
+            .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item.active div, .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item.active span {
+              color: #32B0DA; }
+          .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item:hover {
+            background: #425961; }
+            .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item:hover div, .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item:hover span {
+              color: #32B0DA; }
+            .music-play .mp-margin div.mp-list > div.title + div > ul li.play-item:hover div.trash {
+              opacity: 1; }

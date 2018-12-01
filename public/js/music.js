@@ -1,16 +1,43 @@
 $(function(){
-    var audio = new Audio("./images/music/xwzcy.mp3");
+    var audio = new Audio("./images/music/xwzcy.mp3"); // DOM对象
     var adDuration = 0;
     var isPlay = false;
+    var isover = true;
     var index = 0;
+    var playType = 'order';
+    // 音频加载完成
     audio.oncanplay = function () {
+        $(`.play-item:eq(${index})`).addClass("active").siblings().removeClass("active");
         adDuration = audio.duration;
         console.log("1currentTime: "+audio.currentTime);
         console.log("1duration: "+audio.duration);
     }
+    // 音频播放完
+    audio.onended = function(){
+        isover = true;
+        $(".slider-box").css("left",-4);
+        $(".mp-progress .track-top").css("width",0);
+        $(".mp-time>span:first-child").html("00:00");
+        $(".mp-start-s").show().next().hide();
+        clearInterval(timer);
+        setTimeout(function(){
+            // 顺序播放
+            if(playType == 'order'){
+                ++index;
+                if(index>4) index = 0;
+                audio.src = './images/music/'+$(`.play-item:eq(${index})`).attr("data-music");
+            }
+            // 单曲循环
+            else if(playType == 'loop'){
+                audio.load();
+            }
+            audioPlay();
+        },1000)
+        
+    }
     var timer = null;
     // 点击播放列表中对应歌曲
-    $(".rlist-item").click(function(){
+    $(".rlist-item,.play-item").click(function(){
         index = $(this).index();
         audio.src = './images/music/'+$(this).attr("data-music");
         audioPlay();
@@ -19,14 +46,14 @@ $(function(){
     $(".mp-next").click(function(){
         ++index;
         if(index>4) index = 0;
-        audio.src = './images/music/'+$(`.rlist-item:eq(${index})`).attr("data-music");
+        audio.src = './images/music/'+$(`.play-item:eq(${index})`).attr("data-music");
         audioPlay();
     })
     // 点击进行播放上一首
     $(".mp-prev").click(function(){
         --index;
         if(index<0) index = 4;
-        audio.src = './images/music/'+$(`.rlist-item:eq(${index})`).attr("data-music");
+        audio.src = './images/music/'+$(`.play-item:eq(${index})`).attr("data-music");
         audioPlay();
     })
     // 点击播放音频
@@ -41,12 +68,14 @@ $(function(){
             clearInterval(timer);
         }
     });
+    // 音频播放（正在播放）
     function audioPlay(){
         clearInterval(timer);
         audio.play();
         isPlay = true;
+        isover = false;
         $(".mp-start-s").hide().next().show();
-        audio.loop = true;
+        // audio.loop = true;
         timer = setInterval(function(){
             // 间隔
             var xDuration = $(".mp-progress").width()/adDuration;
@@ -57,12 +86,8 @@ $(function(){
             // 时间
             $(".mp-time>span:first-child").html(timeFilter(parseInt(audio.currentTime/60))+":"+timeFilter(parseInt(audio.currentTime%60)));
 
-            // 循环
-            if(parseInt(audio.currentTime) == 0){
-                $(".slider-box").css("left",-4);
-                $(".mp-progress .track-top").css("width",0);
-            }
         },1000);
+        
     }
     // 滑块的事件，包括点击，拖动
     function sliderbox($box,$track,$trackparent,pad,type,$toFilter=null){
