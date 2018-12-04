@@ -485,9 +485,12 @@ i{
         width:1110px;
         height:100%;
         div.mp-con{
+            position: relative;
             width:100%;
             height:100%;
             display:flex;
+            z-index: 100;
+            background-color: #384245;
             div.mplay{
                 height:100%;
                 img,div{
@@ -659,7 +662,12 @@ i{
             bottom: 60px;
             background-color: #384245;
             border-radius: 6px 6px 0 0;
+            transform: translateY(100%);
             transition: 0.3s;
+            z-index:0;
+            &.hide{
+                transform: none;
+            }
             span,div{
                 color: rgba(255, 255, 255, 0.4);
                 font-size: 14px;

@@ -5,26 +5,33 @@ $(function(){
     var isover = true;
     var index = 0;
     var playType = 'order';
+    var timer = null;
+    var itemSum = 0;
+    itemSum = $(".play-item").length;
     // 音频加载完成
     audio.oncanplay = function () {
         $(`.play-item:eq(${index})`).addClass("active").siblings().removeClass("active");
         adDuration = audio.duration;
-        console.log("1currentTime: "+audio.currentTime);
-        console.log("1duration: "+audio.duration);
+
+        // 音频信息
+        var activeId = $("li.play-item.active").attr("data-id");
+        for(var list of vm.playerlists){
+            if(list.id == activeId){
+                vm.musicInfo.title = list.title;
+                vm.musicInfo.musician = list.musician;
+                vm.musicInfo.time = list.time;
+            }
+        }
     }
     // 音频播放完
     audio.onended = function(){
         isover = true;
-        $(".slider-box").css("left",-4);
-        $(".mp-progress .track-top").css("width",0);
-        $(".mp-time>span:first-child").html("00:00");
-        $(".mp-start-s").show().next().hide();
-        clearInterval(timer);
+        init();
         setTimeout(function(){
             // 顺序播放
             if(playType == 'order'){
                 ++index;
-                if(index>4) index = 0;
+                if(index>itemSum - 1) index = 0;
                 audio.src = './images/music/'+$(`.play-item:eq(${index})`).attr("data-music");
             }
             // 单曲循环
@@ -35,26 +42,46 @@ $(function(){
         },1000)
         
     }
-    var timer = null;
     // 点击播放列表中对应歌曲
     $(".rlist-item,.play-item").click(function(){
         index = $(this).index();
         audio.src = './images/music/'+$(this).attr("data-music");
+        init();
         audioPlay();
+    })
+    // 点击删除
+    $(".play-item .trash").click(function(){
+        itemSum = $(".play-item").length;
+        // 删完了，，
+        if(itemSum == 0){
+            init();
+        }
+        if($(this).parent().index() == index){
+            var i = index + 1;
+            if(i > itemSum - 1) { i = --index; }
+            audio.src = './images/music/'+$(`.play-item:eq(${i})`).attr("data-music");
+            init();
+            audioPlay();
+        }
     })
     // 点击进行播放下一首
     $(".mp-next").click(function(){
-        ++index;
-        if(index>4) index = 0;
-        audio.src = './images/music/'+$(`.play-item:eq(${index})`).attr("data-music");
-        audioPlay();
+        choosePlay(1);
     })
     // 点击进行播放上一首
     $(".mp-prev").click(function(){
-        --index;
-        if(index<0) index = 4;
-        audio.src = './images/music/'+$(`.play-item:eq(${index})`).attr("data-music");
-        audioPlay();
+        choosePlay(-1);
+    })
+    // 单曲循环
+    $(".tool .order").click(function(){
+        if(playType == "order"){
+            playType = "loop"
+            $(".tool .order .loop").hide().next().show();
+        }
+        else{
+            playType = "order"
+            $(".tool .order .loop").show().next().hide();
+        }  
     })
     // 点击播放音频
     $(".mp-start").click(function(){
@@ -68,6 +95,23 @@ $(function(){
             clearInterval(timer);
         }
     });
+    // 初始化数据
+    function init(){
+        $(".slider-box").css("left",-4);
+        $(".mp-progress .track-top").css("width",0);
+        $(".mp-time>span:first-child").html("00:00");
+        $(".mp-start-s").show().next().hide();
+        if(timer) clearInterval(timer);
+    }
+    // 播放哪一首
+    function choosePlay(dur){
+        index += dur;
+        if(index>itemSum - 1) index = 0;
+        else if(index<0) index = itemSum - 1;
+        audio.src = './images/music/'+$(`.play-item:eq(${index})`).attr("data-music");
+        init();
+        audioPlay();
+    }
     // 音频播放（正在播放）
     function audioPlay(){
         clearInterval(timer);
@@ -85,9 +129,7 @@ $(function(){
             $(".mp-progress .track-top").css("width",parseFloat($(".mp-progress .track-top").width())+xDuration); 
             // 时间
             $(".mp-time>span:first-child").html(timeFilter(parseInt(audio.currentTime/60))+":"+timeFilter(parseInt(audio.currentTime%60)));
-
         },1000);
-        
     }
     // 滑块的事件，包括点击，拖动
     function sliderbox($box,$track,$trackparent,pad,type,$toFilter=null){
@@ -162,4 +204,8 @@ $(function(){
     // 调用
     sliderbox($(".slider-box"),$(".mp-progress .track-top"),$(".mp-progress"),4,'musicplay')
     sliderbox($(".volume-track-dot"),$(".volume-track .track-top"),$(".volume-track"),6,'volume')
+
+    $(".s-list").click(function(){
+        $("div.mp-list").toggleClass("hide");
+    })
 })

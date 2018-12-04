@@ -134,3 +134,22 @@ INSERT INTO bilibili_dir VALUES(null,1,7,"舞",0);
 INSERT INTO bilibili_dir VALUES(null,1,8,"曲",0);
 INSERT INTO bilibili_dir VALUES(null,2,1,"默认收藏夹",3);
 INSERT INTO bilibili_dir VALUES(null,2,2,"曲",0);
+
+CREATE TABLE bilibili_comment(
+ cid INT PRIMARY KEY AUTO_INCREMENT, 
+ uid INT,
+ content varchar(255),
+ vid int,
+ comment_time datatime,
+ zan int
+);
+#:评论 
+INSERT INTO bilibili_comment VALUES(null,5,"戏剧节的时候日语系某个班表演了这个！",37,now(),741);
+INSERT INTO bilibili_comment VALUES(null,10,"最喜欢介子小姐了",37,now(),336);
+INSERT INTO bilibili_comment VALUES(null,11,"bgm.acc下载地址：
+http://pan.baidu.com/s/1i5ipKLf",37,now(),202);
+INSERT INTO bilibili_comment VALUES(null,3,"好好听~~",37,now(),0);
+INSERT INTO bilibili_comment VALUES(null,20,"咔叽咔叽山酷狗上有，可以搜哒",37,now(),1);
+INSERT INTO bilibili_comment VALUES(null,15,"循环(¯﹃¯)",37,now(),336);
+INSERT INTO bilibili_comment VALUES(null,2,"为什么不写狸猫杀人那一段呢？",37,now(),14);
+INSERT INTO bilibili_comment VALUES(null,8,"如果…狸猫没有伤害过兔子就好了",37,now(),12);
